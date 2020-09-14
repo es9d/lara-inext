@@ -13,7 +13,7 @@ use Spatie\Permission\Traits\HasRoles;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
-class User extends Authenticatable implements HasMedia,MustVerifyEmail
+class User extends Authenticatable implements HasMedia
 {
     use Notifiable;
     use UUIDTrait;

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'HomeController@index')->middleware('installed')->name('home');
-Auth::routes(['verify' => true]);
+Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 // PDF Views
 Route::get('/viewer/invoice/{invoice}/pdf', 'Application\PDFController@invoice')->name('pdf.invoice');
