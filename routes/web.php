@@ -57,7 +57,7 @@ Route::group(['namespace' => 'CustomerPortal', 'prefix' => '/portal/{customer}',
 });
 
 // Application Routes
-Route::group(['namespace' => 'Application', 'middleware' => ['installed', 'auth', 'dashboard','verified','locale']], function () {
+Route::group(['namespace' => 'Application', 'middleware' => ['installed', 'auth', 'dashboard','locale']], function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
     // Customers
