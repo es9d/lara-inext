@@ -5,7 +5,7 @@
                 <div class="col-sm-auto">
                     <div class="form-group">
                         <label for="filter[payment_number]">{{ __('messages.payment_number') }}</label>
-                        <input name="filter[payment_number]" type="text" class="form-control" value="{{ Request::get("filter")['payment_number'] }}" placeholder="{{ __('messages.search') }}">
+                        <input name="filter[payment_number]" type="text" class="form-control" value="{{ Request::get("filter")['payment_number'] ?? '' }}" placeholder="{{ __('messages.search') }}">
                     </div>
                 </div>
                 <div class="col-sm-auto">
