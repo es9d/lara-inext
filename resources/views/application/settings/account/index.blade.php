@@ -102,7 +102,7 @@
                             <div class="row mt-1">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label for="old_password">{{ __('messages.update_locate') }}</label>
+                                        <label for="old_password">{{ __('messages.language') }}</label>
                                         <select  class="form-control" name="locale"> 
                                             @foreach ($langs as $lang)
                                                 <option value="{{$lang['code']}}" 
