@@ -103,7 +103,7 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="form-group">
-                                        <label for="financial_month_ends">{{ __('messages.month_ends') }}</label>
+                                        <label for="financial_month_ends">{{ __('messages.month_endss') }}</label>
                                         <select id="financial_month_ends" name="financial_month_ends" data-minimum-results-for-search="-1" data-toggle="select" class="form-control select2-hidden-accessible" data-select2-id="financial_month_ends">
                                             <option disabled selected>{{ __('messages.select_month_ends') }}</option>
                                             @foreach(get_months_select2_array() as $month)
