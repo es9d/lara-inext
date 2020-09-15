@@ -94,7 +94,6 @@ function Image($file, $x=null, $y=null, $w=0, $h=0, $type='', $link='', $isMask=
 function ImagePngWithAlpha($file,$x,$y,$w=0,$h=0,$link='')
 {
     $tmp_alpha = tempnam('/var/www/html/storage', 'mska');
-    dd($tmp_alpha);
     $this->tmpFiles[] = $tmp_alpha;
     $tmp_plain = tempnam('/var/www/html/storage', 'mskp');
     $this->tmpFiles[] = $tmp_plain;
