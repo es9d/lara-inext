@@ -29,7 +29,7 @@
                     <li class="nav-item dropdown">
                         <a href="#account_menu" class="nav-link dropdown-toggle" data-toggle="dropdown"
                             data-caret="false">
-                            <img src="{{ $authUser->avatar }}" class="rounded-circle" width="32">
+                            <img src="{{ $authUser->avatar }}" class="rounded-circle" width="32" height="32">
                             <span class="ml-1 d-flex-inline">
                                 <span class="text-light">{{ $authUser->full_name }}</span>
                             </span>
