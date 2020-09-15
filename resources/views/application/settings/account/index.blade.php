@@ -18,6 +18,10 @@
             'name'=>'Russian',
             'code'=>'ru'
         ],
+        [
+            'name'=>'Argentina',
+            'code'=>'ar'
+        ],
 ];
 @endphp
     <div class="page__heading">
