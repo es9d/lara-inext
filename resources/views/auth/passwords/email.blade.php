@@ -32,7 +32,7 @@
             
         </div>
         <div class="form-group">
-            <button class="btn btn-block btn-primary" type="submit">{{ __('messages.send_reset_link') }}</button>
+            <button class="btn btn-block btn-light" type="submit">{{ __('messages.send_reset_link') }}</button>
         </div>
 
         <div class="form-group">

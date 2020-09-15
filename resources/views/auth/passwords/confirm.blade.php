@@ -33,14 +33,14 @@
     </div>
 
     <div class="form-group">
-        <button class="btn btn-block btn-primary"
+        <button class="btn btn-block btn-light"
             type="submit">{{ __('messages.confirm_password') }}</button>
     </div>
 
     @if(Route::has('password.request'))
         <div class="form-group">
             <a href="{{ route('password.request') }}"
-                class="btn btn-block btn-primary">{{ __('messages.forgot_your_password') }}</a>
+                class="btn btn-block btn-light">{{ __('messages.forgot_your_password') }}</a>
         </div>
     @endif
 

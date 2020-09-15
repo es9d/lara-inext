@@ -70,7 +70,7 @@
     </div>
 
     <div class="form-group">
-        <button class="btn btn-block btn-primary" type="submit">{{ __('messages.reset_password') }}</button>
+        <button class="btn btn-block btn-light" type="submit">{{ __('messages.reset_password') }}</button>
     </div>
 </form>
 @endsection
