@@ -127,7 +127,18 @@
             <p class="text-muted">{{ __('messages.customer_shipping_address') }}</p>
         </div>
         <div class="col-lg-8 card-form__body card-body">
-            <p class="row"><strong class=" col headings-color">{{ __('messages.shipping_address') }}</strong></p>
+            <div class="row">
+                <strong class=" col headings-color">{{ __('messages.shipping_address') }}</strong></p>
+                <div class="col"> 
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+                            <input type="checkbox" name="is_gst" id="is_gst" {{ ''}} class="custom-control-input">
+                            <label class="custom-control-label" for="is_gst">{{ __('messages.yes') }}</label>
+                        </div>
+                        <label for="is_gst" class="mb-0">{{ __('messages.same_billing_address') }}</label>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col">
                     <div class="form-group">
@@ -189,3 +200,30 @@
         </div>
     </div>
 </div>
+@section('page_body_scripts')
+    <script>
+        $(document).ready(function() {
+            var is_checked = false;
+            $("label[for='is_gst']").on('click',function(){
+                is_checked = !is_checked;
+            })
+            $('.form-control').on('change paste keyup',function(){
+                if(is_checked){
+                    var input_name = $(this).attr('name')
+                                        .replace('shipping','').replace('billing','');
+                    
+                    $("[name='billing"+input_name+"']").val($(this).val());
+                    $("[name='shipping"+input_name+"']").val($(this).val());
+                    if(input_name==='[address_1]'){
+                        $("[name='billing"+input_name+"']").html($(this).val()); 
+                        $("[name='shipping"+input_name+"']").html($(this).val()); 
+                    }else if(input_name==='[country_id]'){
+                        var country_name = $("option[value='"+$(this).val()+"']").last().html();
+                        $('#select2-shippingcountry_id-container').html(country_name);
+                        $('#select2-billingcountry_id-container').html(country_name);
+                    }
+                }
+            })
+        });
+    </script>
+@endsection
