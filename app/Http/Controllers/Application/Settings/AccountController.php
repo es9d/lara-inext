@@ -46,7 +46,7 @@ class AccountController extends Controller
         // Upload and save avatar
         if ($request->hasFile('avatar')) {
             $user->clearMediaCollection('avatar');
-            $user->addMediaFromRequest('avatar')->toMediaCollection();
+            $user->addMediaFromRequest('avatar')->toMediaCollection('avatar');
         }
         //set language 
         if($request->has('locale')){
