@@ -8,6 +8,7 @@ return [
     |--------------------------------------------------------------------------
     */
     // addition translate
+    'same_billing_address'=>'Same as Billing Address',
     'is_gst' => 'Select include GST or not',
     'no_vendors_yet'=>'No vendors yet',
 

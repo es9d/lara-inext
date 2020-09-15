@@ -7,7 +7,10 @@ return [
     | Apllication Language Lines
     |--------------------------------------------------------------------------
     */
-    
+     // addition translate
+    'same_billing_address' => 'ដូចគ្នានឹងអាសយដ្ឋានវិក្កយបត្រ',
+    'is_gst' => 'ជ្រើសរើសរួមមាន GST រឺក៏អត់',
+    'no_vendors_yet' => 'មិនទាន់មានអ្នកលក់',
     // Console
     'console.checking_invoices' => 'ពិនិត្យស្ថានភាពវិក្កយបត្រវិក័យប័ត្រ.',
     'console.checking_estimates' => 'កំពុងពិនិត្យមើលឋានៈប៉ាន់ស្មាន។.',

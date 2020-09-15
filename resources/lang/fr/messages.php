@@ -7,7 +7,10 @@ return [
     | Apllication Language Lines
     |--------------------------------------------------------------------------
     */
-    
+     // addition translate
+    'same_billing_address' => 'Identique à l\'adresse de facturation',
+    'is_gst' => 'Sélectionnez inclure ou non la TPS',
+    'no_vendors_yet' => 'Pas encore de fournisseurs',
     // Console
     'console.checking_invoices' => 'Checking invoice statuses.',
     'console.checking_estimates' => 'Checking estimate statuses.',

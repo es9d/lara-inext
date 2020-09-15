@@ -7,7 +7,10 @@ return [
     | Apllication Language Lines
     |--------------------------------------------------------------------------
     */
-    
+    // addition translate
+    'same_billing_address'=> '청구지주소와 동일',
+    'is_gst'=> 'GST 포함여부 선택',
+    'no_vendors_yet'=> '공급업체 없음',
     // Console
     'console.checking_invoices' => '청구서 상태 확인.',
     'console.checking_estimates' => '견적서 상태 확인.',

@@ -7,7 +7,10 @@ return [
     | Apllication Language Lines
     |--------------------------------------------------------------------------
     */
-    
+     // addition translate
+    'same_billing_address' => 'Giống như Địa chỉ thanh toán',
+    'is_gst' => 'Chọn bao gồm GST hoặc không',
+    'no_vendors_yet' => 'Chưa có nhà cung cấp nào',
     // Console
     'console.checking_invoices' => 'Kiểm tra trạng thái của hóa đơn.',
     'console.checking_estimates' => 'Kiểm tra trạng thái của ước tính.',

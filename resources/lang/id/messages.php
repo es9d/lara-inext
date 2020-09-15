@@ -7,7 +7,10 @@ return [
     | Apllication Language Lines
     |--------------------------------------------------------------------------
     */
-    
+    //addition translate
+    'same_billing_address' => 'Sama seperti Alamat Penagihan',
+    'is_gst' => 'Pilih include GST or not',
+    'no_vendors_yet' => 'Belum ada vendor',
     // Console
     'console.checking_invoices' => 'Konsol pemeriksaan faktur.',
     'console.checking_estimates' => 'Perkiraan pemeriksaan konsol.',

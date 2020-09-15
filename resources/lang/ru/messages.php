@@ -7,7 +7,10 @@ return [
     | Apllication Language Lines
     |--------------------------------------------------------------------------
     */
-    
+     // addition translate
+    'same_billing_address' => 'То же, что и платежный адрес',
+    'is_gst' => 'Выбрать включать GST или нет',
+    'no_vendors_yet' => 'Продавцов пока нет',
     // Console
     'console.checking_invoices' => 'Проверка статусов счетов.',
     'console.checking_estimates' => 'Проверка статусов оценок.',
