@@ -153,8 +153,8 @@ if (! function_exists('get_months_select2_array')) {
             ['id' => 7, 'text' => __('messages.july')],
             ['id' => 8, 'text' => __('messages.august')],
             ['id' => 9, 'text' => __('messages.september')],
-            ['id' => 10, 'text' => __('messages.november')],
-            ['id' => 11, 'text' => __('messages.october')],
+            ['id' => 10, 'text' => __('messages.october')],
+            ['id' => 11, 'text' => __('messages.november')],
             ['id' => 12, 'text' => __('messages.december')],
         ];
     }
