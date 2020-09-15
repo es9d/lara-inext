@@ -23,7 +23,8 @@ class Expense extends Model implements HasMedia
         'vendor_id',
         'expense_date',
         'notes',
-        'attachment_receipt'
+        'attachment_receipt',
+        'is_gst'
     ];
 
     /**

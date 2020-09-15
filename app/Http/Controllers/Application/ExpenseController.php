@@ -80,7 +80,7 @@ class ExpenseController extends Controller
     {
         $user = $request->user();
         $currentCompany = $user->currentCompany();
-
+        $is_gst = ($request->is_gst)?true:false;
         // Create Expense and Store in Database
         $expense = Expense::create([
             'expense_category_id' => $request->expense_category_id,
@@ -89,6 +89,7 @@ class ExpenseController extends Controller
             'vendor_id' => $request->vendor_id,
             'expense_date' => $request->expense_date,
             'notes' => $request->notes,
+            'is_gst'=>$is_gst,
         ]);
 
         // Upload Receipt File
@@ -135,6 +136,8 @@ class ExpenseController extends Controller
     {
         $expense = Expense::findOrFail($request->expense);
         
+        $is_gst = ($request->is_gst)?true:false;
+
         // Update the Expense
         $expense->update([
             'expense_category_id' => $request->expense_category_id,
@@ -142,6 +145,7 @@ class ExpenseController extends Controller
             'vendor_id' => $request->vendor_id,
             'expense_date' => $request->expense_date,
             'notes' => $request->notes,
+            'is_gst'=>$is_gst,
         ]);
 
         // Upload Receipt File

@@ -24,7 +24,17 @@
                     <a href="{{ route('expenses.download_receipt', $expense->id) }}" target="_blank" class="btn btn-sm btn-info text-white choose-button">{{ __('messages.download_receipt') }}</a>
                 @endif
             </div>
-            
+            <div class="row">
+                <div class="col"> 
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+                            <input type="checkbox" name="is_gst" id="is_gst" {{ $expense->is_gst ? 'checked' : '' }} class="custom-control-input">
+                            <label class="custom-control-label" for="is_gst">{{ __('messages.yes') }}</label>
+                        </div>
+                        <label for="is_gst" class="mb-0">{{ __('messages.is_gst') }}</label>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col"> 
                     <div class="form-group required">

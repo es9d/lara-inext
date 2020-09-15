@@ -7,7 +7,10 @@ return [
     | Apllication Language Lines
     |--------------------------------------------------------------------------
     */
-    
+    // addition translate
+    'is_gst' => 'Select include GST or not',
+    'no_vendors_yet'=>'No vendors yet',
+
     // Console
     'console.checking_invoices' => 'Checking invoice statuses.',
     'console.checking_estimates' => 'Checking estimate statuses.',
