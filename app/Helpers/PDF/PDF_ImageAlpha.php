@@ -93,7 +93,8 @@ function Image($file, $x=null, $y=null, $w=0, $h=0, $type='', $link='', $isMask=
 // pixel-wise operation, not very fast
 function ImagePngWithAlpha($file,$x,$y,$w=0,$h=0,$link='')
 {
-    $tmp_alpha = tempnam('/var/www/html/storage', 'mska');
+    // $tmp_alpha = tempnam('/var/www/html/storage', 'mska');
+    $tmp_alpha = tempnam('.', 'mska');
     $this->tmpFiles[] = $tmp_alpha;
     $tmp_plain = tempnam('/var/www/html/storage', 'mskp');
     $this->tmpFiles[] = $tmp_plain;
