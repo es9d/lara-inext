@@ -1,3 +1,6 @@
+@php
+$slot = 'InvoiceNext';
+@endphp
 @component('mail::layout')
 {{-- Header --}}
 @slot('header')
