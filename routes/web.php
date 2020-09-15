@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'HomeController@index')->middleware('installed')->name('home');
-Auth::routes();
+Auth::routes(['verify'=>true]);
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 // PDF Views
 Route::get('/viewer/invoice/{invoice}/pdf', 'Application\PDFController@invoice')->name('pdf.invoice');
@@ -56,7 +56,7 @@ Route::group(['namespace' => 'CustomerPortal', 'prefix' => '/portal/{customer}',
 });
 
 // Application Routes
-Route::group(['namespace' => 'Application', 'middleware' => ['installed', 'auth', 'dashboard','locale']], function () {
+Route::group(['namespace' => 'Application', 'middleware' => ['installed', 'auth', 'verified' ,'dashboard','locale']], function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
     // Customers
