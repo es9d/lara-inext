@@ -9,18 +9,23 @@
             'name'=>'English',
             'code'=>'en'
         ],[
+            'name'=>'Korean',
+            'code'=>'ko'
+        ],[
+            'name'=>'French',
+            'code'=>'fr'
+        ],[
             'name'=>'Khmer',
             'code'=>'kh'
+        ],[
+            'name'=>'Vietnamese',
+            'code'=>'vn'
         ],[
             'name'=>'Indonesian',
             'code'=>'id'
         ],[
             'name'=>'Russian',
             'code'=>'ru'
-        ],
-        [
-            'name'=>'Argentina',
-            'code'=>'ar'
         ],
 ];
 @endphp
