@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => 'http://165.232.66.234',
+    'name' => env('APP_NAME','InvoiceNext'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' =>'http://165.232.66.234',
 
     // If demo mode is active or not
     'is_demo' => env('IS_DEMO', false),
