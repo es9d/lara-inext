@@ -97,7 +97,7 @@
         {{__('messages.return_to_login')}}
     </div>
     <div class="form-group">
-        <button class="btn btn-block btn-primary" type="button" onclick="window.location='register'">{{__('messages.login')}}</button>
+        <button class="btn btn-block btn-primary" type="button" onclick="window.location='login'">{{__('messages.login')}}</button>
     </div>
 </form>
 
