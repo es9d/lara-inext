@@ -47,6 +47,7 @@
 }
 .btn:hover{
     background-color:black !important;
+    color : white;
 
 }
 [dir=ltr] .sidebar-light .active>.sidebar-menu-button>i,
