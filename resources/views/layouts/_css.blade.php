@@ -42,6 +42,9 @@
     background-color:#0fe6b0 !important;
     border:0px!important;
 }
+.btn-light:hover{
+  color:white !important;
+}
 .btn:hover{
     background-color:black !important;
 
