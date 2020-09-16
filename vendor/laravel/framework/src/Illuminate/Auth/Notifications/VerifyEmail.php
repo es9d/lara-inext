@@ -42,8 +42,11 @@ class VerifyEmail extends Notification
         if (static::$toMailCallback) {
             return call_user_func(static::$toMailCallback, $notifiable, $verificationUrl);
         }
-
+        $email = 'support@invoicenext.com';
+        $name = 'InvoiceNext';
         return (new MailMessage)
+            ->from($email,$name)
+            ->replyTo($email, $name)
             ->subject(Lang::get('Verify Email Address'))
             ->line(Lang::get('Please click the button below to verify your email address.'))
             ->action(Lang::get('Verify Email Address'), $verificationUrl)
