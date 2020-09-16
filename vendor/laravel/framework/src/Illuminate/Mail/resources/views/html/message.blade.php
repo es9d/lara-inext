@@ -7,7 +7,7 @@
 @endslot
 
 {{-- Body --}}
-{{ $slot }}
+{{ 'Invoive' }}
 
 {{-- Subcopy --}}
 @isset($subcopy)
