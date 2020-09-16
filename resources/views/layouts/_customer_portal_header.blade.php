@@ -8,7 +8,7 @@
             <div class="container p-0">
                 <a href="{{ route('customer_portal.dashboard', $currentCustomer->uid) }}"
                     class="navbar-brand">
-                    <img class="navbar-brand-icon" src="{{ asset('assets/images/fox-logo-black.svg') }}" width="22">
+                    <img class="navbar-brand-icon" src="{{ asset('assets/images/favicon.png') }}" width="22">
                     <span>{{ config('app.name') }}</span>
                 </a>
 

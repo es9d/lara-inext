@@ -29,7 +29,7 @@
 
                         <a href="fixed-dashboard.html" class="navbar-brand ">
                             <img class="navbar-brand-icon"
-                                src="{{ asset('assets/images/fox-logo-black.svg') }}" width="22"
+                                src="{{ asset('assets/images/favicon.png') }}" width="22"
                                 alt="{{ config('app.name') }}">
                             <span>{{ config('app.name') }}</span>
                         </a>

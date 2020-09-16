@@ -114,10 +114,10 @@ trait HasAddresses
     public function displayLongAddress(string $role)
     {
         $address = $this->addresses()->whereRole($role)->first();
-        $address_1 = 'sdad';
-        $city = 'sdasd';
-        $state = 'sd';
-        $country = 'sd';
+        $address_1 = '';
+        $city = '';
+        $state = '';
+        $country = '';
         $attributes = $address->getAttributes();
         if (is_array($attributes)) {
             $address_1 = $attributes['address_1'] ?? '';
