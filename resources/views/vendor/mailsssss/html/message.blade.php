@@ -27,4 +27,3 @@ $slot = 'InvoiceNext';
 @endcomponent
 @endslot
 @endcomponent
-@dd('dfdsf')

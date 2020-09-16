@@ -94,10 +94,18 @@ trait HasAddresses
     public function displayShortAddress(string $role)
     { 
         $address = $this->addresses()->whereRole($role)->first();
-
+        if(!$address){
+            return '';
+        }
+        $attributes = $address->getAttributes();
+        //when attributes is null
+        if(!$attributes){
+            return '';
+        }
         $city = $address['city'] ?? '';
         $state = $address['state'] ? $address['state'] . ', ' : '';
         $country = $address['country']['name'];
+        
 
         return "{$city} {$state}{$country}";
     }
@@ -108,10 +116,19 @@ trait HasAddresses
     public function displayLongAddress(string $role)
     {
         $address = $this->addresses()->whereRole($role)->first();
-        dd($address);
-        $address_1 = $address['address_1'] ?? '';
-        $city = $address['city'] ?? '';
-        $state = $address['state'] ? $address['state'] . ', ' : '';
+        //when address is null
+        if(!$address){
+            return '';
+        }
+        $attributes = $address->getAttributes();
+        //when attributes is null
+        if(!$attributes){
+            return '';
+        }
+        //when attributes isn't null
+        $address_1 = $attributes['address_1'] ?? '';
+        $city = $attributes['city'] ?? '';
+        $state = $attributes['state'] ? $attributes['state'].', ': '';
         $country = $address['country']['name'];
 
         return "{$address_1} {$city} {$state}{$country}";
