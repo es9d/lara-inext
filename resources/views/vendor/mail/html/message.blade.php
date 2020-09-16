@@ -7,7 +7,6 @@ $slot = 'InvoiceNext';
 @component('mail::header', ['url' => config('app.url')])
 {{ config('app.name') }}
 @endcomponent
-@dd('dfdsf')
 @endslot
 {{-- Body --}}
 {{ $slot }}
@@ -28,3 +27,4 @@ $slot = 'InvoiceNext';
 @endcomponent
 @endslot
 @endcomponent
+@dd('dfdsf')
