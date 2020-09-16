@@ -207,13 +207,14 @@
             $("label[for='is_gst']").on('click',function(){
                 is_checked = !is_checked;
                 if(is_checked){
-                    $("[name='shipping[address_1]']").attr('disabled',true).val($("[name='billing[address_1]']").val()).html($("[name='billing[address_1]']").val());
-                    $("[name='shipping[phone]']").attr('disabled',true).val($("[name='billing[phone]']").val());
-                    $("[name='shipping[state]']").attr('disabled',true).val($("[name='billing[state]']").val());
-                    $("[name='shipping[city]']").attr('disabled',true).val($("[name='billing[city]']").val());
-                    $("[name='shipping[zip]']").attr('disabled',true).val($("[name='billing[zip]']").val());
-                    $("[name='shipping[name]']").attr('disabled',true).val($("[name='billing[name]']").val());
-                    $("[name='shipping[country_id]']").attr('disabled',true).val($("[name='billing[country_id]']").val());
+                    $("[name='shipping[address_1]']").val($("[name='billing[address_1]']").val()).
+                        html($("[name='billing[address_1]']").val()).attr('disabled',true);
+                    $("[name='shipping[phone]']").val($("[name='billing[phone]']").val()).attr('disabled',true);
+                    $("[name='shipping[state]']").val($("[name='billing[state]']").val()).attr('disabled',true);
+                    $("[name='shipping[city]']").val($("[name='billing[city]']").val()).attr('disabled',true);
+                    $("[name='shipping[zip]']").val($("[name='billing[zip]']").val()).attr('disabled',true);
+                    $("[name='shipping[name]']").val($("[name='billing[name]']").val()).attr('disabled',true);
+                    $("[name='shipping[country_id]']").val($("[name='billing[country_id]']").val()).attr('disabled',true);
                     var country_name = $("option[value='"+$("[name='billing[country_id]']").val()+"']").last().html();
                     console.log(country_name);
                     $('#select2-shippingcountry_id-container').html(country_name);
