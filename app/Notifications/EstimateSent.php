@@ -45,6 +45,7 @@ class EstimateSent extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
+            ->from('support@invoicenext.com','InvoiceNext')
             ->subject(__('messages.estimate_sent', ['estimate_number' => $this->estimate->estimate_number]))
             ->view('emails.notifications.estimate_sent');
     }
