@@ -69,7 +69,7 @@ class EstimateToCustomer extends Mailable
             '{estimate.total}' => money($this->estimate->total, $this->estimate->currency_code)->format(),
         ];
         foreach ($tag_list as $tag => $value) {
-            str_replace($tag, $value, $text);
+            $text = str_replace($tag, $value, $text);
         }
         return $text;
     }
