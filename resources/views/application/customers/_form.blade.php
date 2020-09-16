@@ -195,7 +195,7 @@
             </div>
 
             <div class="form-group text-center mt-5">
-                <button type="submit" class="btn btn-primary">{{ __('messages.save_customer') }}</button>
+                <button type="submit" class="btn btn-primary" id="save_button">{{ __('messages.save_customer') }}</button>
             </div>
         </div>
     </div>
@@ -252,6 +252,15 @@
                         $('#select2-billingcountry_id-container').html(country_name);
                     }
                 }
+            })
+            $('#save_button').on('click',function (){
+                $("[name='shipping[address_1]']").attr('disabled',false);
+                $("[name='shipping[phone]']").attr('disabled',false);
+                $("[name='shipping[state]']").attr('disabled',false);
+                $("[name='shipping[city]']").attr('disabled',false);
+                $("[name='shipping[zip]']").attr('disabled',false);
+                $("[name='shipping[name]']").attr('disabled',false);
+                $("[name='shipping[country_id]']").attr('disabled',false);
             })
         });
     </script>
