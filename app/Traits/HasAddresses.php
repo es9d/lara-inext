@@ -120,7 +120,7 @@ trait HasAddresses
         $country = 'sd';
         $attributes = $address->getAttributes();
         if (is_array($attributes)) {
-            $attributes_1 = $attributes['attributes_1'] ?? '';
+            $address_1 = $attributes['address_1'] ?? '';
             $city = $attributes['city'] ?? '';
             $state = $attributes['state'] ? $attributes['state'] . ', ' : '';
             $country = $address['country']['name'];
