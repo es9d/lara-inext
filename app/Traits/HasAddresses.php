@@ -130,7 +130,7 @@ trait HasAddresses
         $city = $attributes['city'] ?? '';
         $state = $attributes['state'] ? $attributes['state'].', ': '';
         $country = $address['country']['name'];
-
+        header('Content-type: text/plain');
         return "{$address_1} {$city} {$state} {$country}";
     }
 }
