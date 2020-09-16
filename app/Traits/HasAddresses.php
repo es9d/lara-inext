@@ -131,6 +131,6 @@ trait HasAddresses
         $state = $attributes['state'] ? $attributes['state'].', ': '';
         $country = $address['country']['name'];
 
-        return nl2br("{$address_1}\n{$city}\n{$state}\n{$country}");
+        return "{$address_1} {$city} {$state} {$country}";
     }
 }
