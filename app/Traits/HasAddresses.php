@@ -94,10 +94,16 @@ trait HasAddresses
     public function displayShortAddress(string $role)
     { 
         $address = $this->addresses()->whereRole($role)->first();
-
-        $city = $address['city'] ?? '';
-        $state = $address['state'] ? $address['state'] . ', ' : '';
-        $country = $address['country']['name'];
+        $city =  '';
+        $state ='';
+        $country = '';
+        $attributes = $address->getAttributes();
+        if (is_array($attributes)) {
+            $city = $address['city'] ?? '';
+            $state = $address['state'] ? $address['state'] . ', ' : '';
+            $country = $address['country']['name'];
+        }
+        
 
         return "{$city} {$state}{$country}";
     }
@@ -108,12 +114,17 @@ trait HasAddresses
     public function displayLongAddress(string $role)
     {
         $address = $this->addresses()->whereRole($role)->first();
-
-        $address_1 = $address['address_1'] ?? '';
-        $city = $address['city'] ?? '';
-        $state = $address['state'] ? $address['state'] . ', ' : '';
-        $country = $address['country']['name'];
-
+        $address_1 = 'sdad';
+        $city = 'sdasd';
+        $state = 'sd';
+        $country = 'sd';
+        $attributes = $address->getAttributes();
+        if (is_array($attributes)) {
+            $attributes_1 = $attributes['attributes_1'] ?? '';
+            $city = $attributes['city'] ?? '';
+            $state = $attributes['state'] ? $attributes['state'] . ', ' : '';
+            $country = $address['country']['name'];
+        }
         return "{$address_1} {$city} {$state}{$country}";
     }
 }
