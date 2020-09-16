@@ -83,7 +83,7 @@ class RegisterController extends Controller
 
         // Attach User to Company
         $user->attachCompany($company);
-
+        $user->sendEmailVerificationNotification();
         return $user;
     }
 }
