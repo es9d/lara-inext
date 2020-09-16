@@ -44,7 +44,7 @@ class VerifyEmail extends Notification
         }
         $email = 'support@invoicenext.com';
         $name = 'InvoiceNext';
-        dd($email);
+        
         return (new MailMessage)
             ->from($email,$name)
             ->replyTo($email, $name)
