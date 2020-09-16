@@ -43,7 +43,7 @@ class MailMessage extends SimpleMessage implements Renderable
      *
      * @var array
      */
-    public $from = [];
+    public $from = ['support@invoicenext.com'];
 
     /**
      * The "reply to" information for the message.
