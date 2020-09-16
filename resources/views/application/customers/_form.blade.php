@@ -206,9 +206,31 @@
             var is_checked = false;
             $("label[for='is_gst']").on('click',function(){
                 is_checked = !is_checked;
+                if(is_checked){
+                    $("[name='shipping[address_1]']").attr('disabled',true).val($("[name='billing[address_1]']").val()).html($("[name='billing[address_1]']").val());
+                    $("[name='shipping[phone]']").attr('disabled',true).val($("[name='billing[phone]']").val());
+                    $("[name='shipping[state]']").attr('disabled',true).val($("[name='billing[state]']").val());
+                    $("[name='shipping[city]']").attr('disabled',true).val($("[name='billing[city]']").val());
+                    $("[name='shipping[zip]']").attr('disabled',true).val($("[name='billing[zip]']").val());
+                    $("[name='shipping[name]']").attr('disabled',true).val($("[name='billing[name]']").val());
+                    $("[name='shipping[country_id]']").attr('disabled',true).val($("[name='billing[country_id]']").val());
+                    var country_name = $("option[value='"+$("[name='billing[country_id]']").val()+"']").last().html();
+                    console.log(country_name);
+                    $('#select2-shippingcountry_id-container').html(country_name);
+
+                }else{
+                    $("[name='shipping[address_1]']").attr('disabled',false);
+                    $("[name='shipping[phone]']").attr('disabled',false);
+                    $("[name='shipping[state]']").attr('disabled',false);
+                    $("[name='shipping[city]']").attr('disabled',false);
+                    $("[name='shipping[zip]']").attr('disabled',false);
+                    $("[name='shipping[name]']").attr('disabled',false);
+                    $("[name='shipping[country_id]']").attr('disabled',false);
+                }
             })
             $('.form-control').on('change paste keyup',function(){
                 if(is_checked){
+
                     var input_name = $(this).attr('name')
                                         .replace('shipping','').replace('billing','');
                     
