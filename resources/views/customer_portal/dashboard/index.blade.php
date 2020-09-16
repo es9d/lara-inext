@@ -82,15 +82,11 @@
             </div>
             <div class="col-12 col-md-3 mt-4 mb-4">
                 <h5>{{ __('messages.billing') }}</h5>
-                <p>
-                    {{ $currentCustomer->displayLongAddress('billing') }}
-                </p>
+                <p style="white-space: pre;">{{ $currentCustomer->displayLongAddress('billing') }}</p>
             </div>
             <div class="col-12 col-md-3 mt-4 mb-4">
                 <h5>{{ __('messages.shipping') }}</h5>
-                <p>
-                    {{ $currentCustomer->displayLongAddress('shipping') }}
-                </p>
+                <p style="white-space: pre;">{{ $currentCustomer->displayLongAddress('shipping') }}</p>
             </div>
             <div class="col-12 col-md-3 mt-4 mb-4">
                 <h5>{{ __('messages.standing') }}</h5>

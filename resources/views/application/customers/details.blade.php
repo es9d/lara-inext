@@ -34,9 +34,7 @@
             </div>
             <div class="col-12 col-md-3 mt-4 mb-4">
                 <h5>{{ __('messages.billing') }}</h5>
-                <p>
-                    {{ $customer->displayLongAddress('billing') }}
-                </p>
+                <p style="white-space: pre;">{{ $customer->displayLongAddress('billing') }}</p>
             </div>
             <div class="col-12 col-md-3 mt-4 mb-4">
                 <h5>{{ __('messages.standing') }}</h5>

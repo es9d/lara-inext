@@ -21,11 +21,11 @@
             <div id="address_component" class="form-row d-none">
                 <div class="col-6">
                     <strong>{{ __('messages.bill_to') }}:</strong>
-                    <p id="billing_address"></p>
+                    <p id="billing_address" style="white-space: pre;"></p>
                 </div>
                 <div class="col-6">
                     <strong>{{ __('messages.ship_to') }}:</strong>
-                    <p id="shipping_address"></p>
+                    <p id="shipping_address" style="white-space: pre;"></p>
                 </div>
             </div>
         </div>

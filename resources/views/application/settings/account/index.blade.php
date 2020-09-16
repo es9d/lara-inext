@@ -26,7 +26,10 @@
         ],[
             'name'=>'Russian',
             'code'=>'ru'
-        ],
+        ],[
+            'name'=>'Nepali',
+            'code'=>'ne'
+        ]
 ];
 @endphp
     <div class="page__heading">
@@ -123,7 +126,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="old_password">{{ __('messages.old_password') }}</label>
-                                        <input name="old_password" type="password" class="form-control" placeholder="{{ __('messages.old_password') }}">
+                                        <input name="old_password" type="password" class="form-control" placeholder="{{ __('messages.old_password') }}" value="ss">
                                     </div>
                                 </div>
                                 <div class="col">

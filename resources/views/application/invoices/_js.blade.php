@@ -1,6 +1,6 @@
 <script>
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-    
+
     $("#customer").select2({
         ajax: { 
             url: "{{ route('ajax.customers') }}",
@@ -14,6 +14,7 @@
                 };
             },
             processResults: function (response) {
+                console.log('dfdsaf')
                 return {
                     results: response
                 };

@@ -34,9 +34,7 @@
             </div>
             <div class="col-12 col-md-3 mt-4 mb-4">
                 <h5>{{ __('messages.billing') }}</h5>
-                <p>
-                    {{ $vendor->displayLongAddress('billing') }}
-                </p>
+                <p  style="white-space: pre;">{{ $vendor->displayLongAddress('billing') }}</p>
             </div>
             <div class="col-12 col-md-3 offset-md-3 text-right mt-4 mb-4">
                 <a href="{{ route('vendors.edit', $vendor->id) }}" class="btn btn-primary">
