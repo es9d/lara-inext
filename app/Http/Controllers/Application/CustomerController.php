@@ -66,7 +66,7 @@ class CustomerController extends Controller
     {
         $user = $request->user();
         $currentCompany = $user->currentCompany();
-        
+        dd($request->is_same_billandship);
         // Create Customer and Store in Database
         $customer = Customer::create([
             'company_id' => $currentCompany->id,

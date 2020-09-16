@@ -132,10 +132,10 @@
                 <div class="col"> 
                     <div class="form-group">
                         <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
-                            <input type="checkbox" name="is_gst" id="is_gst" {{ ''}} class="custom-control-input">
-                            <label class="custom-control-label" for="is_gst">{{ __('messages.yes') }}</label>
+                            <input type="checkbox" name="is_same_billandship" id="is_same_billandship" {{ ''}} class="custom-control-input">
+                            <label class="custom-control-label" for="is_same_billandship">{{ __('messages.yes') }}</label>
                         </div>
-                        <label for="is_gst" class="mb-0">{{ __('messages.same_billing_address') }}</label>
+                        <label for="is_same_billandship" class="mb-0">{{ __('messages.same_billing_address') }}</label>
                     </div>
                 </div>
             </div>
@@ -204,7 +204,7 @@
     <script>
         $(document).ready(function() {
             var is_checked = false;
-            $("label[for='is_gst']").on('click',function(){
+            $("label[for='is_same_billandship']").on('click',function(){
                 is_checked = !is_checked;
                 if(is_checked){
                     $("[name='shipping[address_1]']").val($("[name='billing[address_1]']").val()).html($("[name='billing[address_1]']").val());
