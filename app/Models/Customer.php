@@ -25,6 +25,7 @@ class Customer extends Model
         'phone',
         'website',
         'currency_id',
+        'is_same_billandship',
     ];
 
     /**

@@ -132,7 +132,7 @@
                 <div class="col"> 
                     <div class="form-group">
                         <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
-                            <input type="checkbox" name="is_same_billandship" id="is_same_billandship" {{ ''}} class="custom-control-input">
+                            <input type="checkbox" name="is_same_billandship" id="is_same_billandship" {{ ($customer->is_same_billandship)?'checked':''}} class="custom-control-input">
                             <label class="custom-control-label" for="is_same_billandship">{{ __('messages.yes') }}</label>
                         </div>
                         <label for="is_same_billandship" class="mb-0">{{ __('messages.same_billing_address') }}</label>

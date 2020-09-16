@@ -66,7 +66,7 @@ class CustomerController extends Controller
     {
         $user = $request->user();
         $currentCompany = $user->currentCompany();
-        dd($request->is_same_billandship);
+        $is_same_billandship = ($request->is_same_billandship==='on');
         // Create Customer and Store in Database
         $customer = Customer::create([
             'company_id' => $currentCompany->id,
@@ -76,11 +76,15 @@ class CustomerController extends Controller
             'phone' => $request->phone,
             'website' => $request->website,
             'currency_id' => $request->currency_id,
+            'is_same_billandship'=>$is_same_billandship
         ]);
-
         // Set Customer's billing and shipping addresses
         $customer->address('billing', $request->input('billing'));
-        $customer->address('shipping', $request->input('shipping'));
+        if($request->is_same_billandship==='on'){
+            $customer->address('shipping', $request->input('billing'));
+        }else{
+            $customer->address('shipping', $request->input('shipping'));
+        }
 
         session()->flash('alert-success', __('messages.customer_added'));
         return redirect()->route('customers.details', $customer->id);
@@ -142,7 +146,7 @@ class CustomerController extends Controller
     public function update(Update $request)
     {
         $customer = Customer::findOrFail($request->customer);
-
+        $is_same_billandship = ($request->is_same_billandship==='on');
         // Update Customer in Database
         $customer->update([
             'display_name' => $request->display_name,
@@ -151,6 +155,7 @@ class CustomerController extends Controller
             'phone' => $request->phone,
             'website' => $request->website,
             'currency_id' => $request->currency_id,
+            'is_same_billandship'=>$is_same_billandship
         ]);
 
         // Update Customer's billing and shipping addresses
