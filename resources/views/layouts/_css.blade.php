@@ -38,9 +38,6 @@
 .sidebar-menu-button ,h1.m-0{
     font-family:'Lexend Deca'
 } 
-
-
-
 .btn{
     background-color:#0fe6b0 !important;
     color:black!important;
