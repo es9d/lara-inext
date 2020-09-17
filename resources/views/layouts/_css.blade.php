@@ -40,6 +40,7 @@
 }
 .btn{
     background-color:#0fe6b0 !important;
+    color:black!important;
     border:0px!important;
 }
 .btn-light:hover{
