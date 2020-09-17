@@ -25,7 +25,6 @@
         @include('application.estimates._form')
     </form>
 @endsection
-
 @section('page_body_scripts')
     @include('application.estimates._js')
     <script>

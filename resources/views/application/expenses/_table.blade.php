@@ -52,7 +52,14 @@
     <div class="row justify-content-center card-body pb-0 pt-5">
         <i class="material-icons fs-64px">monetization_on</i>
     </div>
-    <div class="row justify-content-center card-body pb-5">
+    <div class="row justify-content-center card-body ">
         <p class="h4">{{ __('messages.no_expenses_yet') }}</p>
     </div>
+    <form method="get" action="/expenses/create" style="text-align: center">
+        <button class="btn btn-success mb-5" style="margin: auto;">
+            <i class="material-icons">add</i> 
+            Create Expense
+        </button>
+        <input type="hidden" name="vid" value="{{ isset($vendor)?$vendor->id:'' }}"/>
+    </form>
 @endif

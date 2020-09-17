@@ -84,7 +84,14 @@
     <div class="row justify-content-center card-body pb-0 pt-5">
         <i class="material-icons fs-64px">description</i>
     </div>
-    <div class="row justify-content-center card-body pb-5">
+    <div class="row justify-content-center card-body">
         <p class="h4">{{ __('messages.no_invoices_yet') }}</p>
     </div>
+    <form method="get" action="/invoices/create" style="text-align: center">
+        <button class="btn btn-success mb-5" style="margin: auto;">
+            <i class="material-icons">add</i> 
+            Create Invoice
+        </button>
+        <input type="hidden" name="customerid" value="{{ isset($customer)?$customer->id:'' }}"/>
+    </form>
 @endif

@@ -20,7 +20,7 @@
     <div class="row card-group-row">
         <div class="col-lg-3 col-md-6 card-group-row__col">
             <div class="card card-group-row__card">
-                <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                <div class="card-body-x-lg card-body d-flex flex-row align-items-center" style="padding-bottom:0">
                     <div class="flex">
                         <a href="{{route('customers')}}" class="text-decoration-none">
                             <div class="card-header__title text-muted mb-2 d-flex">
@@ -31,11 +31,15 @@
                     </div>
                     <div><i class="material-icons icon-muted icon-40pt ml-3">account_box</i></div>
                 </div>
+                <div class="card-body-x-lg card-body" style="padding-top: 0;">
+                    <button class="btn btn-sm btn-dashboard-link" style="float: right;" to="customers">+ Create Customer</button>
+                </div>
             </div>
         </div>
+        
         <div class="col-lg-3 col-md-6 card-group-row__col">
             <div class="card card-group-row__card">
-                <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                <div class="card-body-x-lg card-body d-flex flex-row align-items-center" style="padding-bottom:0">
                     <div class="flex">
                         <a href="{{route('invoices')}}" class="text-decoration-none">
                             <div class="card-header__title text-muted mb-2 d-flex">
@@ -46,11 +50,15 @@
                     </div>
                     <div><i class="material-icons icon-muted icon-40pt ml-3">receipt</i></div>
                 </div>
+                <div class="card-body-x-lg card-body" style="padding-top: 0;">
+                    <button class="btn btn-sm btn-dashboard-link" style="float: right;" to="invoices">+ Create Invoice</button>
+                </div>
             </div>
         </div>
+        
         <div class="col-lg-3 col-md-6 card-group-row__col">
             <div class="card card-group-row__card">
-                <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                <div class="card-body-x-lg card-body d-flex flex-row align-items-center" style="padding-bottom:0">
                     <div class="flex">
                         <a href="{{route('estimates')}}" class="text-decoration-none">
                             <div class="card-header__title text-muted mb-2 d-flex">
@@ -61,19 +69,27 @@
                     </div>
                     <div><i class="material-icons icon-muted icon-40pt ml-3">description</i></div>
                 </div>
+                <div class="card-body-x-lg card-body" style="padding-top: 0;">
+                    <button class="btn btn-sm btn-dashboard-link" style="float: right;" to="estimates">+ Create Estimate</button>
+                </div>
             </div>
         </div>
+        
         <div class="col-lg-3 col-md-6 card-group-row__col">
             <div class="card card-group-row__card">
-                <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                <div class="card-body-x-lg card-body d-flex flex-row align-items-center" style="padding-bottom:0">
                     <div class="flex">
                         <div class="card-header__title text-muted mb-2 d-flex">{{ __('messages.due_amount') }}</div>
                         <span class="h4 m-0">{{ money($totalDueAmount, $currentCompany->currency->code) }}</span>
                     </div>
                     <div><i class="material-icons icon-muted icon-40pt ml-3">monetization_on</i></div>
                 </div>
+                <div class="card-body-x-lg card-body" style="padding-top: 0;width:0;">
+                    <button class="btn btn-sm btn-dashboard-link" style="display:none" to="customer"></button>
+                </div>
             </div>
         </div>
+        
     </div>
 
     <div class="card">
@@ -165,5 +181,8 @@
             };
             Orders('#expensesChart');
         })();
+        $('.btn-dashboard-link').on('click',function(){
+            location.href = "/"+$(this).attr('to')+"/create";
+        })
     </script>
 @endsection

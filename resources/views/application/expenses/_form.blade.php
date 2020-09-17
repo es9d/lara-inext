@@ -53,7 +53,7 @@
                         <select name="vendor_id" data-toggle="select" class="form-control select2-hidden-accessible" data-select2-id="vendor_id">
                             <option disabled selected>{{ __('messages.select_vendor') }}</option>
                             @foreach($vendors as $vendor)
-                                <option value="{{ $vendor->id }}" {{ $expense->vendor_id == $vendor->id ? 'selected=""' : '' }}>{{ $vendor->display_name }}</option>
+                                <option value="{{ $vendor->id }}" {{ ($expense->vendor_id == $vendor->id||$current_vendor==$vendor->id) ? 'selected=""' : '' }}>{{ $vendor->display_name }}</option>
                             @endforeach
                         </select>
                     </div>

@@ -16,6 +16,16 @@
                             {{ $estimate->customer->display_name }}
                         </option>
                     @endif
+                    @if(isset($current_customer)&&$current_customer)
+                        <option value="{{ $current_customer->id }}" 
+                            selected=""
+                            data-currency="{{ $current_customer->currency }}" 
+                            data-billing_address="{{$current_customer->displayLongAddress('billing')}}"
+                            data-shipping_address="{{$current_customer->displayLongAddress('shipping')}}"
+                            >
+                            {{ $current_customer->display_name }}
+                        </option>
+                    @endif
                 </select> 
             </div>
             <div id="address_component" class="form-row d-none">

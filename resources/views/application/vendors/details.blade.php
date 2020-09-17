@@ -45,6 +45,14 @@
                     <i class="material-icons">delete</i> 
                     {{ __('messages.delete') }}
                 </a>
+                <form class="mt-3" method="get" action="/expenses/create" style="text-align:center;float:right;">
+                    <button class="btn btn-success mb-5" style="margin: auto;">
+                        <i class="material-icons">add</i> 
+                        Create Expense
+                    </button>
+                    <input type="hidden" name="vid" value="{{ $vendor->id }}"/>
+                </form>
+            
             </div>
         </div>
     </div>

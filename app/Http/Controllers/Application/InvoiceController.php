@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Application;
 use App\Http\Controllers\Controller;
 use App\Mails\InvoiceToCustomer;
 use App\Models\Invoice;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Requests\Application\Invoice\Store;
 use App\Http\Requests\Application\Invoice\Update;
@@ -82,13 +83,15 @@ class InvoiceController extends Controller
         $products = $currentCompany->products;
         $tax_per_item = (boolean) $currentCompany->getSetting('tax_per_item');
         $discount_per_item = (boolean) $currentCompany->getSetting('discount_per_item');
-        
+        //--------------------------////////////------------------------
+        $current_customer = Customer::find(['id' =>$request->customerid])->first();
         return view('application.invoices.create', [
             'invoice' => $invoice,
             'customers' => $customers,
             'products' => $products,
             'tax_per_item' => $tax_per_item,
             'discount_per_item' => $discount_per_item,
+            'current_customer' =>$current_customer,
         ]);
     }
 

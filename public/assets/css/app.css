@@ -2935,7 +2935,7 @@ html {
 [dir=ltr] .btn {
     display: inline-block;
     font-weight: 600;
-    color: #112b4a;
+    color: #000000;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -2959,7 +2959,8 @@ html {
 }
 
 [dir=ltr] .btn:hover {
-    color: #112b4a;
+    color: #ffffff;
+    background-color:black;
     text-decoration: none;
 }
 
@@ -12869,7 +12870,7 @@ html {
 
 [dir=ltr] a.text-primary:hover,
 [dir=ltr] a.text-primary:focus {
-    color: #0c64cb !important;
+    color: white !important;
 }
 
 [dir=ltr] .text-secondary {
@@ -12914,7 +12915,7 @@ html {
 
 [dir=ltr] a.text-danger:hover,
 [dir=ltr] a.text-danger:focus {
-    color: #a71d2a !important;
+    color: #ffffff !important;
 }
 
 [dir=ltr] .text-light {
@@ -14204,7 +14205,7 @@ html,
 }
 
 [dir=ltr] .search-form--light .form-control:focus+.btn:hover {
-    color: #112b4a;
+    color: #ffffff;
 }
 
 [dir=ltr] .navbar {

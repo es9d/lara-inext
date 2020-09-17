@@ -10,7 +10,7 @@ use App\Http\Requests\Application\Expense\Store;
 use App\Http\Requests\Application\Expense\Update;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
-
+use Session;
 class ExpenseController extends Controller
 {
     /**
@@ -54,7 +54,6 @@ class ExpenseController extends Controller
         $currentCompany = $user->currentCompany();
 
         $expense = new Expense();
-
         // Fill model with old input
         if (!empty($request->old())) {
             $expense->fill($request->old());
@@ -65,7 +64,8 @@ class ExpenseController extends Controller
 
         return view('application.expenses.create', [
             'expense' => $expense,
-            'vendors' => $vendors
+            'vendors' => $vendors,
+            'current_vendor' => $request->vid,
         ]); 
     }
 

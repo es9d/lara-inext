@@ -31,7 +31,9 @@
     $("#customer").change(function() {
         setupCustomer();            
     });
-
+    @if(isset($current_customer)&&$current_customer)
+        setupCustomer();             
+    @endif
     $("#add_product_row").click(function() {
         addProductRow();
     });

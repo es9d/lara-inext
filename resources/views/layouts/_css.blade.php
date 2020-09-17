@@ -37,18 +37,15 @@
 }
 .sidebar-menu-button ,h1.m-0{
     font-family:'Lexend Deca'
-} 
-.btn{
-    background-color:#0fe6b0 !important;
-    color:black!important;
-    border:0px!important;
 }
-.btn-light:hover{
-  color:white !important;
+.btn{
+    color:black!important;
+    background-color:#0fe6b0 !important;
+    border:0px!important;
 }
 .btn:hover{
     background-color:black !important;
-    color : white;
+    color : white!important;
 
 }
 [dir=ltr] .sidebar-light .active>.sidebar-menu-button>i,
