@@ -2992,7 +2992,7 @@ html {
 }
 
 [dir=ltr] .btn-primary {
-    color: #fff;
+    color: #0e76ef!important;
     background-color: #308AF3;
     border-color: #308AF3;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -3202,7 +3202,7 @@ html {
 }
 
 [dir=ltr] .btn-danger {
-    color: #fff;
+    color: red!important;
     background-color: #dc3545;
     border-color: #dc3545;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -12915,7 +12915,7 @@ html {
 
 [dir=ltr] a.text-danger:hover,
 [dir=ltr] a.text-danger:focus {
-    color: #ffffff !important;
+    color: #a71d2a !important;
 }
 
 [dir=ltr] .text-light {
