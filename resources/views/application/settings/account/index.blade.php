@@ -126,7 +126,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="old_password">{{ __('messages.old_password') }}</label>
-                                        <input name="old_password" type="password" class="form-control" placeholder="{{ __('messages.old_password') }}" value="ss">
+                                        <input name="old_password" type="password" class="form-control" placeholder="{{ __('messages.old_password') }}" value="">
                                     </div>
                                 </div>
                                 <div class="col">
