@@ -38,7 +38,7 @@
                             @include('application.settings.tax_type._form')
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-success">{{ __('messages.create_tax') }}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('messages.create_tax') }}</button>
                             </div>
                         </form>
                     </div>

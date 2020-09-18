@@ -291,7 +291,7 @@
         </div>
  
         <div class="col-12 text-center float-right mt-3">
-            <button type="button" class="btn btn-success save_form_button">{{ __('messages.save_invoice') }}</button>
+            <button type="button" class="btn btn-primary save_form_button">{{ __('messages.save_invoice') }}</button>
         </div>
     </div>
 </div>

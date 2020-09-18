@@ -30,7 +30,7 @@
                                 </p>
                             </div>
                             <div class="col-auto">
-                                <a href="{{ route('settings.expense_categories.create') }}" class="btn btn-success text-white">
+                                <a href="{{ route('settings.expense_categories.create') }}" class="btn btn-primary text-white">
                                     {{ __('messages.add_expense_category') }}
                                 </a>
                             </div>
@@ -60,7 +60,7 @@
                                                     {{ $expense_category->description ?? '-' }}
                                                 </td>
                                                 <td class="h6">
-                                                    <a href="{{ route('settings.expense_categories.edit', $expense_category->id) }}" class="btn btn-success">
+                                                    <a href="{{ route('settings.expense_categories.edit', $expense_category->id) }}" class="btn text-primary">
                                                         <i class="material-icons icon-16pt">edit</i>
                                                         {{ __('messages.edit') }}
                                                     </a>

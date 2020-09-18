@@ -38,7 +38,7 @@
                             @include('application.settings.product.unit._form')
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-success">{{ __('messages.update_product_unit') }}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('messages.update_product_unit') }}</button>
                                 <a href="{{ route('settings.product.unit.delete', $product_unit->id) }}" class="btn btn-light text-danger delete-confirm">
                                     <i class="material-icons icon-16pt">delete</i>
                                     {{ __('messages.delete') }}

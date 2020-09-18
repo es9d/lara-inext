@@ -91,13 +91,13 @@
         </div>
     </div>
     <div class="form-group">
-        <button class="btn btn-block btn-success" type="submit">{{ __('messages.register') }}</button>
+        <button class="btn btn-block btn-primary" type="submit">{{ __('messages.register') }}</button>
     </div>
     <div class="form-group" style="text-align: center; color: darkgray; border-top: solid 1px gray; padding-top: 5px;">
         {{__('messages.return_to_login')}}
     </div>
     <div class="form-group">
-        <button class="btn btn-block btn-success" type="button" onclick="window.location='login'">{{__('messages.login')}}</button>
+        <button class="btn btn-block btn-primary" type="button" onclick="window.location='login'">{{__('messages.login')}}</button>
     </div>
 </form>
 

@@ -39,7 +39,7 @@
             </div>
         </div>
         <button type="submit" class="btn bg-white border-left border-top border-top-sm-0 rounded-top-0 rounded-top-sm rounded-left-sm-0">
-            <i class="material-icons primary---text icon-20pt">refresh</i>
+            <i class="material-icons text-primary icon-20pt">refresh</i>
             {{ __('messages.filter') }}
         </button>
     </div>

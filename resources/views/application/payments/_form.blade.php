@@ -92,7 +92,7 @@
             </div>
 
             <div class="form-group text-center mt-3">
-                <button type="button" class="btn btn-success form_with_price_input_submit">{{ __('messages.save_payment') }}</button>
+                <button type="button" class="btn btn-primary form_with_price_input_submit">{{ __('messages.save_payment') }}</button>
             </div>
         </div>
     </div>

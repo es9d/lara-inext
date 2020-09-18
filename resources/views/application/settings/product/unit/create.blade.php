@@ -38,7 +38,7 @@
                             @include('application.settings.product.unit._form')
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-success">{{ __('messages.create_product_unit') }}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('messages.create_product_unit') }}</button>
                             </div>
                         </form>
                     </div>

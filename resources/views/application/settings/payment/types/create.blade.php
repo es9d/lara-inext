@@ -38,7 +38,7 @@
                             @include('application.settings.payment.types._form')
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-success">{{ __('messages.add_payment_type') }}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('messages.add_payment_type') }}</button>
                             </div>
                         </form>
                     </div>

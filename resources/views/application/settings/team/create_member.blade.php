@@ -38,7 +38,7 @@
                             @include('application.settings.team._member_form')
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-success">{{ __('messages.add_member') }}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('messages.add_member') }}</button>
                             </div>
                         </form>
                     </div>

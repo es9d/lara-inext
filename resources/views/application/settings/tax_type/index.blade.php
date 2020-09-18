@@ -30,7 +30,7 @@
                                 </p>
                             </div>
                             <div class="col-auto">
-                                <a href="{{ route('settings.tax_types.create') }}" class="btn btn-success text-white">
+                                <a href="{{ route('settings.tax_types.create') }}" class="btn btn-primary text-white">
                                     {{ __('messages.add_tax') }}
                                 </a>
                             </div>
@@ -60,7 +60,7 @@
                                                     {{ $tax_type->percent }}
                                                 </td>
                                                 <td class="h6">
-                                                    <a href="{{ route('settings.tax_types.edit', $tax_type->id) }}" class="btn btn-success">
+                                                    <a href="{{ route('settings.tax_types.edit', $tax_type->id) }}" class="btn text-primary">
                                                         <i class="material-icons icon-16pt">edit</i>
                                                         {{ __('messages.edit') }}
                                                     </a>

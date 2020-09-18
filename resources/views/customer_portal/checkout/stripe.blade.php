@@ -48,7 +48,7 @@
                             </div>
         
                             <div class="d-flex flex-row mt-4 justify-content-end align-items-center">
-                                <button id="card-button" class="btn btn-success">
+                                <button id="card-button" class="btn btn-primary">
                                     {{ __('messages.pay') }} ({{ money($invoice->due_amount, $invoice->currency_code) }})
                                 </button>
                             </div>

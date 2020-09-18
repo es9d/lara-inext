@@ -30,7 +30,7 @@
                             @include('application.settings.payment.gateways.forms.'.$gateway)
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-success">{{ __('messages.update_gateway') }}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('messages.update_gateway') }}</button>
                             </div>
                         </form>
                     </div>

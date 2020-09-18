@@ -30,7 +30,7 @@
                                 </p>
                             </div>
                             <div class="col-auto">
-                                <a href="{{ route('settings.team.createMember') }}" class="btn btn-success text-white">
+                                <a href="{{ route('settings.team.createMember') }}" class="btn btn-primary text-white">
                                     {{ __('messages.add_member') }}
                                 </a>
                             </div>
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="col-auto">
                                     @if($authUser->hasRole(['admin', 'super_admin']))
-                                        <a href="{{ route('settings.team.editMember', $user->uid) }}" class="btn btn-light btn-success">
+                                        <a href="{{ route('settings.team.editMember', $user->uid) }}" class="btn btn-light text-primary">
                                             <i class="material-icons">edit</i>
                                             {{ __('messages.edit') }}
                                         </a>

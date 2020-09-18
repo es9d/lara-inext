@@ -38,7 +38,7 @@
                             @include('application.settings.expense_category._form')
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-success">{{ __('messages.update_category') }}</button>
+                                <button type="submit" class="btn btn-primary">{{ __('messages.update_category') }}</button>
                                 <a href="{{ route('settings.expense_categories.delete', $expense_category->id) }}" class="btn btn-light text-danger delete-confirm">
                                     <i class="material-icons icon-16pt">delete</i>
                                     {{ __('messages.delete') }}
