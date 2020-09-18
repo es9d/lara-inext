@@ -1,10 +1,7 @@
 <tr>
 <td class="header">
 <a href="{{ $url }}" style="display: inline-block;">
-    This is your logo 
-![Some option text][logo]
-
-[logo]: {{asset('/assets/images/logo-invoice-next.svg')}} "Logo"
+{{ HTML::image('http://165.232.66.234/assets/images/logo-invoice-next.svg') }}
 </a>
 </td>
 </tr>
