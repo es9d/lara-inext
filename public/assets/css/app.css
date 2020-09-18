@@ -12915,7 +12915,7 @@ html {
 
 [dir=ltr] a.text-danger:hover,
 [dir=ltr] a.text-danger:focus {
-    color: #a71d2a !important;
+    color: #a71d2a ;
 }
 
 [dir=ltr] .text-light {
