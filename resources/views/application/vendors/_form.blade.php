@@ -109,7 +109,7 @@
             </div>
 
             <div class="form-group text-center mt-5">
-                <button type="submit" class="btn btn-primary">{{ __('messages.save_vendor') }}</button>
+                <button type="submit" class="btn btn-success">{{ __('messages.save_vendor') }}</button>
             </div>
         </div>
     </div>

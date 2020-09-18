@@ -30,7 +30,7 @@
                                 </p>
                             </div>
                             <div class="col-auto">
-                                <a href="{{ route('settings.team.createMember') }}" class="btn btn-primary text-white">
+                                <a href="{{ route('settings.team.createMember') }}" class="btn btn-success text-white">
                                     {{ __('messages.add_member') }}
                                 </a>
                             </div>

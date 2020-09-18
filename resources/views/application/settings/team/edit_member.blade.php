@@ -38,7 +38,7 @@
                             @include('application.settings.team._member_form')
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-primary">{{ __('messages.update_member') }}</button>
+                                <button type="submit" class="btn btn-success">{{ __('messages.update_member') }}</button>
                                 <a href="{{ route('settings.team.deleteMember', $member->uid) }}" class="btn btn-light text-danger delete-confirm">
                                     <i class="material-icons">delete</i>
                                     {{ __('messages.delete') }}

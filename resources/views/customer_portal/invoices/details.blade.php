@@ -56,13 +56,13 @@
                 </form>
             @endif
             @if($invoice->paid_status != 'PAID' and $invoice->company->isRazorpayActive())
-                <a href="{{ route('customer_portal.invoices.razorpay.checkout', ['customer' => $currentCustomer->uid, 'invoice' => $invoice->uid]) }}" class="btn btn-primary">
+                <a href="{{ route('customer_portal.invoices.razorpay.checkout', ['customer' => $currentCustomer->uid, 'invoice' => $invoice->uid]) }}" class="btn btn-success">
                     <i class="material-icons">payment</i> 
                     {{ __('messages.pay_with_razorpay') }}
                 </a>
             @endif
             @if($invoice->paid_status != 'PAID' and $invoice->company->isStripeActive())
-                <a href="{{ route('customer_portal.invoices.stripe.checkout', ['customer' => $currentCustomer->uid, 'invoice' => $invoice->uid]) }}" class="btn btn-primary">
+                <a href="{{ route('customer_portal.invoices.stripe.checkout', ['customer' => $currentCustomer->uid, 'invoice' => $invoice->uid]) }}" class="btn btn-success">
                     <i class="material-icons">payment</i> 
                     {{ __('messages.pay_with_credit_card') }}
                 </a>

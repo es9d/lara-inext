@@ -42,7 +42,7 @@
                 <p class="h5 mt-1">{{ money($customer->invoice_due_amount, $customer->currency->code)  }}</p>
             </div>
             <div class="col-12 col-md-3 text-right mt-4 mb-4"> 
-                <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-primary">
+                <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-success">
                     <i class="material-icons">edit</i> 
                     {{ __('messages.edit') }}
                 </a>

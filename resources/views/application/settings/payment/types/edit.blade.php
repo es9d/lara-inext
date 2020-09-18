@@ -38,7 +38,7 @@
                             @include('application.settings.payment.types._form')
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-primary">{{ __('messages.update_payment_type') }}</button>
+                                <button type="submit" class="btn btn-success">{{ __('messages.update_payment_type') }}</button>
                                 <a href="{{ route('settings.payment.type.delete', $payment_type->id) }}" class="btn btn-light text-danger delete-confirm">
                                     <i class="material-icons icon-16pt">delete</i>
                                     {{ __('messages.delete') }}

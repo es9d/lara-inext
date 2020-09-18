@@ -195,7 +195,7 @@
             </div>
 
             <div class="form-group text-center mt-5">
-                <button type="submit" class="btn btn-primary" id="save_button">{{ __('messages.save_customer') }}</button>
+                <button type="submit" class="btn btn-success" id="save_button">{{ __('messages.save_customer') }}</button>
             </div>
         </div>
     </div>

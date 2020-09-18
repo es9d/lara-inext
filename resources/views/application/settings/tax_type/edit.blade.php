@@ -38,7 +38,7 @@
                             @include('application.settings.tax_type._form')
 
                             <div class="form-group text-right mt-4">
-                                <button type="submit" class="btn btn-primary">{{ __('messages.update_tax') }}</button>
+                                <button type="submit" class="btn btn-success">{{ __('messages.update_tax') }}</button>
                                 <a href="{{ route('settings.tax_types.delete', $tax_type->id) }}" class="btn btn-light text-danger delete-confirm">
                                     <i class="material-icons icon-16pt">delete</i>
                                     {{ __('messages.delete') }}

@@ -47,7 +47,7 @@
     </div>
 
     <div class="form-group">
-        <button class="btn btn-block btn-primary" type="submit">{{ __('messages.login') }}</button>
+        <button class="btn btn-block btn-success" type="submit">{{ __('messages.login') }}</button>
     </div>
 
     <div class="form-group text-center">
@@ -64,7 +64,7 @@
         You don't have an account, create one now!
     </div>
     <div class="form-group">
-        <button class="btn btn-block btn-primary" type="button" onclick="window.location='register'">Signup</button>
+        <button class="btn btn-block btn-success" type="button" onclick="window.location='register'">Signup</button>
     </div>
 </form>
 

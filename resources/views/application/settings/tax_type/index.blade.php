@@ -30,7 +30,7 @@
                                 </p>
                             </div>
                             <div class="col-auto">
-                                <a href="{{ route('settings.tax_types.create') }}" class="btn btn-primary text-white">
+                                <a href="{{ route('settings.tax_types.create') }}" class="btn btn-success text-white">
                                     {{ __('messages.add_tax') }}
                                 </a>
                             </div>

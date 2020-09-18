@@ -98,7 +98,7 @@
                             </div>
             
                             <div class="form-group text-right mt-4">
-                                <button type="button" class="btn btn-primary submit">{{ __('messages.update_settings') }}</button>
+                                <button type="button" class="btn btn-success submit">{{ __('messages.update_settings') }}</button>
                             </div>
                         </form>
                     </div>

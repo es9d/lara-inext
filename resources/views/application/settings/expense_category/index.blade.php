@@ -30,7 +30,7 @@
                                 </p>
                             </div>
                             <div class="col-auto">
-                                <a href="{{ route('settings.expense_categories.create') }}" class="btn btn-primary text-white">
+                                <a href="{{ route('settings.expense_categories.create') }}" class="btn btn-success text-white">
                                     {{ __('messages.add_expense_category') }}
                                 </a>
                             </div>
