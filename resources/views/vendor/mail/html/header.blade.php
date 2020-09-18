@@ -1,11 +1,10 @@
 <tr>
 <td class="header">
 <a href="{{ $url }}" style="display: inline-block;">
-{{-- @if (trim($slot) === 'Laravel') --}}
-<img src="https://laravel.com/img/notification-logo.png" class="logo" alt="Laravel Logo">
-{{-- @else --}}
-{{-- {{ $slot }} --}}
-{{-- @endif --}}
+    This is your logo 
+![Some option text][logo]
+
+[logo]: {{asset('/assets/images/logo-invoice-next.svg')}} "Logo"
 </a>
 </td>
 </tr>
