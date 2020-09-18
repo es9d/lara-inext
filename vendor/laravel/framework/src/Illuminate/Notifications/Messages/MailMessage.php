@@ -163,14 +163,14 @@ class MailMessage extends SimpleMessage implements Renderable
      */
     public function from($address, $name = null)
     {
-        $this->from = [$address, $name];
+        $this->from = ['sdfsd@dfsd.dsfsd', $name];
 
         return $this;
     }
 
 
 
-    
+
     /**
      * Set the "reply to" address of the message.
      *
