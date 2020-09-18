@@ -12865,7 +12865,7 @@ html {
 }
 
 [dir=ltr] .text-primary {
-    color: black !important;
+    color: #308AF3 !important;
 }
 
 [dir=ltr] a.text-primary:hover,
