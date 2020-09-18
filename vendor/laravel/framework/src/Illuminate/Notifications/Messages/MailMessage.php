@@ -163,13 +163,10 @@ class MailMessage extends SimpleMessage implements Renderable
      */
     public function from($address, $name = null)
     {
-        $this->from = ['sdfsd@dfsd.dsfsd', $name];
+        $this->from = [$address, $name];
 
         return $this;
     }
-
-
-
 
     /**
      * Set the "reply to" address of the message.
@@ -312,7 +309,6 @@ class MailMessage extends SimpleMessage implements Renderable
      */
     public function render()
     {
-        dd($this);
         if (isset($this->view)) {
             return Container::getInstance()->make('mailer')->render(
                 $this->view, $this->data()
