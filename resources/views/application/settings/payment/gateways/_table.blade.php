@@ -22,7 +22,7 @@
                     </div>
                 </td>
                 <td class="h6 text-right">
-                    <a href="{{ route('settings.payment.gateway.edit', 'paypal') }}" class="btn text-primary">
+                    <a href="{{ route('settings.payment.gateway.edit', 'paypal') }}" class="btn btn-success">
                         <i class="material-icons icon-16pt">edit</i>
                         {{ __('messages.edit') }}
                     </a>
@@ -42,7 +42,7 @@
                     </div>
                 </td>
                 <td class="h6 text-right">
-                    <a href="{{ route('settings.payment.gateway.edit', 'stripe') }}" class="btn text-primary">
+                    <a href="{{ route('settings.payment.gateway.edit', 'stripe') }}" class="btn btn-success">
                         <i class="material-icons icon-16pt">edit</i>
                         {{ __('messages.edit') }}
                     </a>
@@ -62,7 +62,7 @@
                     </div>
                 </td>
                 <td class="h6 text-right">
-                    <a href="{{ route('settings.payment.gateway.edit', 'razorpay') }}" class="btn text-primary">
+                    <a href="{{ route('settings.payment.gateway.edit', 'razorpay') }}" class="btn btn-success">
                         <i class="material-icons icon-16pt">edit</i>
                         {{ __('messages.edit') }}
                     </a>

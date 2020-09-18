@@ -18,7 +18,7 @@
                             </a>
                         </td>
                         <td class="h6">
-                            <a href="{{ route('settings.product.unit.edit', $product_unit->id) }}" class="btn text-primary">
+                            <a href="{{ route('settings.product.unit.edit', $product_unit->id) }}" class="btn btn-success">
                                 <i class="material-icons icon-16pt">edit</i>
                                 {{ __('messages.edit') }}
                             </a>

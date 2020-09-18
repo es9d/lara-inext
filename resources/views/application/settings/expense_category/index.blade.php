@@ -60,7 +60,7 @@
                                                     {{ $expense_category->description ?? '-' }}
                                                 </td>
                                                 <td class="h6">
-                                                    <a href="{{ route('settings.expense_categories.edit', $expense_category->id) }}" class="btn text-primary">
+                                                    <a href="{{ route('settings.expense_categories.edit', $expense_category->id) }}" class="btn btn-success">
                                                         <i class="material-icons icon-16pt">edit</i>
                                                         {{ __('messages.edit') }}
                                                     </a>

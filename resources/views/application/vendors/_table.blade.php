@@ -20,7 +20,7 @@
                         <td>
                             <div class="d-flex align-items-center">
                                 <div class="d-flex align-items-center">
-                                    <i class="material-icons icon-16pt mr-1 text-primary">business</i>
+                                    <i class="material-icons icon-16pt mr-1 btn-success">business</i>
                                     <a href="{{ route('vendors.details', $vendor->id) }}">{{ $vendor->display_name }}</a>
                                 </div>
                             </div>

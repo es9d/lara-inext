@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="col-auto">
                                     @if($authUser->hasRole(['admin', 'super_admin']))
-                                        <a href="{{ route('settings.team.editMember', $user->uid) }}" class="btn btn-light text-primary">
+                                        <a href="{{ route('settings.team.editMember', $user->uid) }}" class="btn btn-light btn-success">
                                             <i class="material-icons">edit</i>
                                             {{ __('messages.edit') }}
                                         </a>
