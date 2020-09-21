@@ -115,13 +115,12 @@ class ExpenseController extends Controller
         $currentCompany = $user->currentCompany();
 
         $expense = Expense::findOrFail($request->expense);
-
         // Vendors list for select2 options
         $vendors = Vendor::findByCompany($currentCompany->id)->get();
-
         return view('application.expenses.edit', [
             'expense' => $expense,
             'vendors' => $vendors,
+            'current_vendor' => $request->vid,
         ]);
     }
 
