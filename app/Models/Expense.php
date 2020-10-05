@@ -43,7 +43,7 @@ class Expense extends Model implements HasMedia
      */
     public function category()
     {
-        return $this->belongsTo(ExpenseCategory::class);
+        return $this->belongsTo(ExpenseCategory::class,'expense_category_id');
     }
 
     /**
