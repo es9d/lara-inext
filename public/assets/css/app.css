@@ -2992,8 +2992,8 @@ html {
 }
 
 [dir=ltr] .btn-primary {
-    color: #0e76ef!important;
-    background-color: #308AF3;
+    color:white!important;
+    background-color: #308AF3!important;
     border-color: #308AF3;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
@@ -3202,8 +3202,8 @@ html {
 }
 
 [dir=ltr] .btn-danger {
-    color: red!important;
-    background-color: #dc3545;
+    color: white!important;
+    background-color: #dc3545!important;
     border-color: #dc3545;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
