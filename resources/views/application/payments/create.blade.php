@@ -61,7 +61,7 @@
                     return data.text;
                 }
             });
-
+            
             $("#customer").change(function() {
                 var customer_id = $("#customer").val();
                 var currency = $('#customer').find(':selected').data('currency');
@@ -70,6 +70,7 @@
 
                 $.get("{{ route('ajax.invoices') }}", {customer_id: customer_id}, function(response) {
                     if(!jQuery.isEmptyObject(response)) {
+                        $('#invoice_select').empty();
                         $('#invoice_select').next().remove();
                         $('#invoice_select').val('')
                           setupPriceInput(currency);
