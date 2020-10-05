@@ -50,24 +50,27 @@
                     <i class="material-icons">delete</i> 
                     {{ __('messages.delete') }}
                 </a>
+                
                 <form class="mt-3" method="get" action="/invoices/create" style="text-align:center;float:right;">
                     <button class="btn btn-success" style="margin: auto;">
                         <i class="material-icons">add</i> 
-                        +{{ __('messages.create_invoice')}}
+                        {{ __('messages.create_invoice')}}
                     </button>
                     <input type="hidden" name="customerid" value="{{ $customer->id }}"/>
                 </form>
+                
                 <form class="mt-3" method="get" action="/estimates/create" style="text-align:center;float:right;">
                     <button class="btn btn-success" style="margin: auto;">
                         <i class="material-icons">add</i> 
-                        +{{ __('messages.create_estimate')}}
+                        {{ __('messages.create_estimate')}}
                     </button>
                     <input type="hidden" name="customerid" value="{{ $customer->id }}"/>
                 </form>
+
                 <form class="mt-3" method="get" action="/payments/create" style="text-align:center;float:right;">
                     <button class="btn btn-success" style="margin: auto;">
                         <i class="material-icons">add</i> 
-                        +{{ __('messages.create_payment')}}
+                        {{ __('messages.create_payment')}}
                     </button>
                     <input type="hidden" name="customerid" value="{{ $customer->id }}"/>
                 </form>
