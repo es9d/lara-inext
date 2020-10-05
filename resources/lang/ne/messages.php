@@ -2,7 +2,9 @@
 <?php
 
 return [
-
+    'same_billing_address' => 'बिलि ठेगाना जस्तै उस्तै',
+    'is_gst' => 'जीएसटी समावेश समावेश गर्नुहोस् चयन गर्नुहोस्',
+    'no_vendors_yet' => 'अहिले सम्म कुनै विक्रेता छैन',
     // Console
     'console.checking_invoices' => 'चलान स्थितिहरू जाँच गर्दै',
     'console.checking_estimates' => 'अनुमान स्थितिहरु जाँच गर्दै',

@@ -275,7 +275,7 @@ return [
     'update_password_description' => '비밀번호를 업데이트하려면 아래 정보를 입력하십시오.',
     'old_password' => '이전 비밀번호',
     'new_password' => '새로운 비밀번호',
-    'update_settings' => '업데이트 설정',
+    'update_settings' => '설정 업데이트',
     'company_settings' => '회사 설정',
     'company_logo' => '회사 로고',
     'company_name' => '회사 이름',

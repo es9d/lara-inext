@@ -61,7 +61,7 @@
                     return data.text;
                 }
             });
-            
+
             $("#customer").change(function() {
                 var customer_id = $("#customer").val();
                 var currency = $('#customer').find(':selected').data('currency');
@@ -71,10 +71,8 @@
                 $.get("{{ route('ajax.invoices') }}", {customer_id: customer_id}, function(response) {
                     if(!jQuery.isEmptyObject(response)) {
                         $('#invoice_select').empty();
-                        $('#invoice_select').next().remove();
-                        $('#invoice_select').val('')
-                          setupPriceInput(currency);
-
+                        setupPriceInput(currency);
+                        
                         $('#invoice_select').select2({
                             placeholder: 'Select Invoice',
                             minimumResultsForSearch: -1,
@@ -87,6 +85,12 @@
 
                         $('#amount').val($('#invoice_select').find(':selected').data('due_amount'));
                         $("#amount").focusout();
+                    }else{
+                        $('#invoice_select').empty();
+                        $('#invoice_select').select2({
+                            placeholder: "{{ __('messages.select_invoice') }}",
+                            minimumResultsForSearch: -1
+                        })
                     }
                 });
             });
@@ -97,7 +101,6 @@
                 console.log(currency,customer_id);
                 $.get("{{ route('ajax.invoices') }}", {customer_id:customer_id}, function(response) {
                     if(!jQuery.isEmptyObject(response)) {
-                        $('#invoice_select').next().remove()   
                         setupPriceInput(currency);
 
                         $('#invoice_select').select2({
@@ -117,6 +120,10 @@
             @endif
             }
             init_customer();
+            $('#invoice_select').change(function(){
+                $('#amount').val($('#invoice_select').find(':selected').data('due_amount'));
+                $("#amount").focusout();
+            })
         });
     </script>
 @endsection

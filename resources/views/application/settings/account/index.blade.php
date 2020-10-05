@@ -29,6 +29,9 @@
         ],[
             'name'=>'Nepali',
             'code'=>'ne'
+        ],[
+            'name'=>'Polish',
+            'code'=>'pl'
         ]
 ];
 @endphp
