@@ -143,7 +143,7 @@ return [
     'no_customers_yet' => 'No Customers yet',
     'no_products_yet' => 'No Products yet',
     'no_estimates_yet' => 'No Estimates yet',
-    'no_invoices_yet' => 'No Payments yet',
+    'no_invoices_yet' => 'No Invoices yet',
     'no_payments_yet' => 'No Payments yet',
     'no_expenses_yet' => 'No Expenses yet',
     'no_activities_yet' => 'No Activities yet',
