@@ -78,7 +78,7 @@
     <form method="get" action="/estimates/create" style="text-align: center">
         <button class="btn btn-success mb-5" style="margin: auto;">
             <i class="material-icons">add</i> 
-            Create Estimate
+            {{ __('messages.create_estimate')}}
         </button>
         <input type="hidden" name="customerid" value="{{ isset($customer)?$customer->id:'' }}"/>
     </form>

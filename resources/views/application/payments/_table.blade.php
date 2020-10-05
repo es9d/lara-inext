@@ -58,7 +58,7 @@
     <form method="get" action="/payments/create" style="text-align: center">
         <button class="btn btn-success mb-5" style="margin: auto;">
             <i class="material-icons">add</i> 
-            Create Payment
+            {{ __('messages.create_payment')}}
         </button>
         <input type="hidden" name="customerid" value="{{ isset($customer)?$customer->id:'' }}"/>
     </form>

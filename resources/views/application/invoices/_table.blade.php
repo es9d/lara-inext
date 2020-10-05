@@ -90,7 +90,7 @@
     <form method="get" action="/invoices/create" style="text-align: center">
         <button class="btn btn-success mb-5" style="margin: auto;">
             <i class="material-icons">add</i> 
-            Create Invoice
+            +{{ __('messages.create_invoice')}}
         </button>
         <input type="hidden" name="customerid" value="{{ isset($customer)?$customer->id:'' }}"/>
     </form>

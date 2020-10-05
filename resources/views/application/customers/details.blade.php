@@ -53,21 +53,21 @@
                 <form class="mt-3" method="get" action="/invoices/create" style="text-align:center;float:right;">
                     <button class="btn btn-success" style="margin: auto;">
                         <i class="material-icons">add</i> 
-                        Create Invoice
+                        +{{ __('messages.create_invoice')}}
                     </button>
                     <input type="hidden" name="customerid" value="{{ $customer->id }}"/>
                 </form>
                 <form class="mt-3" method="get" action="/estimates/create" style="text-align:center;float:right;">
                     <button class="btn btn-success" style="margin: auto;">
                         <i class="material-icons">add</i> 
-                        Create Estimate
+                        +{{ __('messages.create_estimate')}}
                     </button>
                     <input type="hidden" name="customerid" value="{{ $customer->id }}"/>
                 </form>
                 <form class="mt-3" method="get" action="/payments/create" style="text-align:center;float:right;">
                     <button class="btn btn-success" style="margin: auto;">
                         <i class="material-icons">add</i> 
-                        Create Payemnt
+                        +{{ __('messages.create_payment')}}
                     </button>
                     <input type="hidden" name="customerid" value="{{ $customer->id }}"/>
                 </form>
