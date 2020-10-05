@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Application;
 use App\Http\Controllers\Controller;
 use App\Models\Invoice;
 use App\Models\Payment;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Requests\Application\Payment\Store;
 use App\Http\Requests\Application\Payment\Update;
@@ -77,9 +78,10 @@ class PaymentController extends Controller
                 $payment->amount = $invoice->due_amount;
             }
         }
-
+        $current_customer = Customer::find(['id' =>$request->customerid])->first();
         return view('application.payments.create', [
-            'payment' => $payment
+            'payment' => $payment,
+            'current_customer'=> $current_customer,
         ]);
     }
 

@@ -55,4 +55,11 @@
     <div class="row justify-content-center card-body pb-5">
         <p class="h4">{{ __('messages.no_payments_yet') }}</p>
     </div>
+    <form method="get" action="/payments/create" style="text-align: center">
+        <button class="btn btn-success mb-5" style="margin: auto;">
+            <i class="material-icons">add</i> 
+            Create Payment
+        </button>
+        <input type="hidden" name="customerid" value="{{ isset($customer)?$customer->id:'' }}"/>
+    </form>
 @endif

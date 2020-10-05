@@ -37,6 +37,9 @@
                             @if($payment->customer_id)
                                 <option value="{{ $payment->customer_id }}" selected>{{ $payment->customer->display_name }}</option>
                             @endif
+                            @if($current_customer)
+                                <option value="{{ $current_customer->id }}" data-currency={{json_encode($current_customer->currency)}}  selected>{{ $current_customer->display_name }}</option>
+                            @endif
                         </select>
                     </div>
                 </div>

@@ -70,7 +70,10 @@
 
                 $.get("{{ route('ajax.invoices') }}", {customer_id: customer_id}, function(response) {
                     if(!jQuery.isEmptyObject(response)) {
-                        $('#invoice_select').empty();
+                        $('#invoice_select').next().remove();
+                        $('#invoice_select').val('')
+                          setupPriceInput(currency);
+
                         $('#invoice_select').select2({
                             placeholder: 'Select Invoice',
                             minimumResultsForSearch: -1,
@@ -86,6 +89,33 @@
                     }
                 });
             });
+            function init_customer() {
+            @if($current_customer)  
+                var customer_id = $("#customer").val();
+                var currency = $('#customer').find(':selected').data('currency');
+                console.log(currency,customer_id);
+                $.get("{{ route('ajax.invoices') }}", {customer_id:customer_id}, function(response) {
+                    if(!jQuery.isEmptyObject(response)) {
+                        $('#invoice_select').next().remove()   
+                        setupPriceInput(currency);
+
+                        $('#invoice_select').select2({
+                            placeholder: 'Select Invoice',
+                            minimumResultsForSearch: -1,
+                            data: response,
+                            templateSelection: function (data, container) {
+                                $(data.element).attr('data-due_amount', data.due_amount);
+                                return data.text;
+                            }
+                        });
+
+                        $('#amount').val($('#invoice_select').find(':selected').data('due_amount'));
+                        $("#amount").focusout();
+                    }
+                });
+            @endif
+            }
+            init_customer();
         });
     </script>
 @endsection

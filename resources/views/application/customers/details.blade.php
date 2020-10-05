@@ -64,6 +64,13 @@
                     </button>
                     <input type="hidden" name="customerid" value="{{ $customer->id }}"/>
                 </form>
+                <form class="mt-3" method="get" action="/payments/create" style="text-align:center;float:right;">
+                    <button class="btn btn-success" style="margin: auto;">
+                        <i class="material-icons">add</i> 
+                        Create Payemnt
+                    </button>
+                    <input type="hidden" name="customerid" value="{{ $customer->id }}"/>
+                </form>
             </div>
         </div>
     </div>
