@@ -7,6 +7,7 @@
 <link type="text/css" href="{{ asset('assets/vendor/select2/select2.min.css') }}" rel="stylesheet">
 <link type="text/css" href="{{ asset('assets/css/vendor-flatpickr.css') }}" rel="stylesheet">
 <link type="text/css" href="{{ asset('assets/css/vendor-flatpickr-airbnb.css') }}" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}" />
@@ -35,8 +36,13 @@
   src: local('Lexend Deca Regular'), local('LexendDeca-Regular'), url(https://fonts.gstatic.com/s/lexenddeca/v2/K2F1fZFYk-dHSE0UPPuwQ5qnJy8.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 .sidebar-menu-button ,h1.m-0{
-    font-family:'Lexend Deca'
+  @if(app()->getLocale()=='ru')
+    font-family:Arial, Helvetica, sans-serif!important;
+  @else
+    font-family:"Lexend Deca"!important;
+  @endif
 }
 .btn{
     color:black!important;
