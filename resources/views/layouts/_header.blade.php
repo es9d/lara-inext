@@ -81,7 +81,7 @@
 
                 <ul class="nav navbar-nav d-none d-sm-flex border-left navbar-height align-items-center">
                     
-                    <li class="nav-item dropdown"  style="overflow: auto">
+                    <li class="nav-item dropdown">
                         <a href="#account_menu" class="nav-link dropdown-toggle" data-toggle="dropdown"
                             data-caret="false">
                             <img src="{{ $authUser->avatar }}" class="rounded-circle" width="32" height="32">
@@ -89,7 +89,7 @@
                                 <span class="text-light">{{ $authUser->full_name }}</span>
                             </span>
                         </a>
-                        <div id="account_menu" class="dropdown-menu dropdown-menu-right">
+                        <div id="account_menu" class="dropdown-menu dropdown-menu-right" style="overflow: auto">
                             <div class="dropdown-item-text dropdown-item-text--lh">
                                 <div><strong>{{ $authUser->full_name }}</strong></div>
                             </div>
