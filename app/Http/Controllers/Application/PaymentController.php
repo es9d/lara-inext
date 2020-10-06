@@ -151,9 +151,10 @@ class PaymentController extends Controller
     public function edit(Request $request)
     {
         $payment = Payment::findOrFail($request->payment);
-
+        $current_customer = Customer::find(['id' =>$request->customerid])->first();
         return view('application.payments.edit', [
-            'payment' => $payment
+            'payment' => $payment,
+            'current_customer'=> $current_customer,
         ]);
     }
 
