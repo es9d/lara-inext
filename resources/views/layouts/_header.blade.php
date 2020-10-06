@@ -81,7 +81,7 @@
 
                 <ul class="nav navbar-nav d-none d-sm-flex border-left navbar-height align-items-center">
                     
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown"  style="overflow: auto">
                         <a href="#account_menu" class="nav-link dropdown-toggle" data-toggle="dropdown"
                             data-caret="false">
                             <img src="{{ $authUser->avatar }}" class="rounded-circle" width="32" height="32">
