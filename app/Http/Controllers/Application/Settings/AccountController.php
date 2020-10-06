@@ -52,7 +52,7 @@ class AccountController extends Controller
         if($request->has('locale')){
             $user->setSetting('locale',$request->locale);
         }
-        session()->flash('alert-success', __('messages.account_updated'));
+        session()->flash('alert-success','messages.account_updated');
         return redirect()->route('settings.account');
     }
 }
