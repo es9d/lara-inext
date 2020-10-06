@@ -15,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', 'HomeController@index')->middleware('installed')->name('home');
 Auth::routes(['verify'=>true]);
+
+Route::get('/lang/{country}',function($country){
+    Auth::user()->setSetting('locale',$country);
+    session()->flash('alert-success','messages.account_updated');
+    return redirect()->back()->withInput();
+
+})->name('language');
+
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 // PDF Views
 Route::get('/viewer/invoice/{invoice}/pdf', 'Application\PDFController@invoice')->name('pdf.invoice');

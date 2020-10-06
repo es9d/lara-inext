@@ -1,3 +1,44 @@
+@php
+    $langs = [
+        [
+            'name'=>'English',
+            'country_code'=>'us',
+            'language_code'=>'en'
+        ],[
+            'name'=>'Korean',
+            'country_code'=>'kr',
+            'language_code'=>'ko'
+        ],[
+            'name'=>'French',
+            'country_code'=>'fr',
+            'language_code'=>'fr'
+        ],[
+            'name'=>'Khmer',
+            'country_code'=>'kh',
+            'language_code'=>'kh'
+        ],[
+            'name'=>'Vietnamese',
+            'country_code'=>'vn',
+            'language_code'=>'vn'
+        ],[
+            'name'=>'Indonesian',
+            'country_code'=>'id',
+            'language_code'=>'id'
+        ],[
+            'name'=>'Russian',
+            'country_code'=>'ru',
+            'language_code'=>'ru'
+        ],[
+            'name'=>'Nepali',
+            'country_code'=>'np',
+            'language_code'=>'ne'
+        ],[
+            'name'=>'Polish',
+            'country_code'=>'pl',
+            'language_code'=>'pl'
+        ]
+];
+@endphp
 <div id="header" class="mdk-header js-mdk-header m-0">
     <div class="mdk-header__bg">
         <div class="mdk-header__bg-front"></div>
@@ -17,15 +58,29 @@
                     {{-- <span>{{ config('app.name') }}</span> --}}
                 </a>
 
-                <!-- <ul class="nav navbar-nav ml-auto d-none d-md-flex">
-                    <li class="nav-item">
+                <ul class="nav navbar-nav ml-auto d-none d-md-flex">
+                    {{-- <li class="nav-item">
                         <a href="https://docs-foxtrot.varuscreative.com/" target="_blank" class="nav-link">
                             <i class="material-icons">help_outline</i> {{ __('messages.get_help') }}
                         </a>
+                    </li> --}}
+                    <li class="nav-item dropdown">
+                    @foreach ($langs as $lang)
+                        @if ($lang['language_code'] ===app()->getlocale())
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-{{$lang['country_code']}}" style="font-size: 20px"></span> {{$lang['name']}}
+                            </a>
+                        @endif
+                    @endforeach
+                        <div class="dropdown-menu" aria-labelledby="dropdown09" style="overflow: auto">
+                        @foreach ($langs as $lang)
+                            <a class="dropdown-item" href="/lang/{{ $lang['language_code'] }}"><span class="flag-icon flag-icon-{{ $lang['country_code'] }}"> </span>{{$lang['name']}}</a>                                
+                        @endforeach
+                        </div>
                     </li>
-                </ul> -->
+                </ul>
 
                 <ul class="nav navbar-nav d-none d-sm-flex border-left navbar-height align-items-center">
+                    
                     <li class="nav-item dropdown">
                         <a href="#account_menu" class="nav-link dropdown-toggle" data-toggle="dropdown"
                             data-caret="false">
@@ -46,6 +101,7 @@
                             <a class="dropdown-item" href="{{ route('logout') }}">{{ __('messages.logout') }}</a>
                         </div>
                     </li>
+                   
                 </ul>
             </div>
         </div>

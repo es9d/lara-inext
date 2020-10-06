@@ -7,31 +7,40 @@
     $langs = [
         [
             'name'=>'English',
-            'code'=>'en'
+            'country_code'=>'us',
+            'language_code'=>'en'
         ],[
             'name'=>'Korean',
-            'code'=>'ko'
+            'country_code'=>'kr',
+            'language_code'=>'ko'
         ],[
             'name'=>'French',
-            'code'=>'fr'
+            'country_code'=>'fr',
+            'language_code'=>'fr'
         ],[
             'name'=>'Khmer',
-            'code'=>'kh'
+            'country_code'=>'kh',
+            'language_code'=>'kh'
         ],[
             'name'=>'Vietnamese',
-            'code'=>'vn'
+            'country_code'=>'vn',
+            'language_code'=>'vn'
         ],[
             'name'=>'Indonesian',
-            'code'=>'id'
+            'country_code'=>'id',
+            'language_code'=>'id'
         ],[
             'name'=>'Russian',
-            'code'=>'ru'
+            'country_code'=>'ru',
+            'language_code'=>'ru'
         ],[
             'name'=>'Nepali',
-            'code'=>'ne'
+            'country_code'=>'ne',
+            'language_code'=>'ne'
         ],[
             'name'=>'Polish',
-            'code'=>'pl'
+            'country_code'=>'pl',
+            'language_code'=>'pl'
         ]
 ];
 @endphp
@@ -111,8 +120,8 @@
                                         <label for="old_password">{{ __('messages.language') }}</label>
                                         <select  class="form-control" name="locale"> 
                                             @foreach ($langs as $lang)
-                                                <option value="{{$lang['code']}}" 
-                                                    @if (app()->getLocale()==$lang['code'])
+                                                <option value="{{$lang['language_code']}}" 
+                                                    @if (app()->getLocale()==$lang['language_code'])
                                                         selected        
                                                     @endif
                                                 >{{$lang['name']}}</option>                                                
