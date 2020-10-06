@@ -73,7 +73,7 @@
                     @endforeach
                         <div class="dropdown-menu" aria-labelledby="dropdown09" style="overflow: auto">
                         @foreach ($langs as $lang)
-                            <a class="dropdown-item" href="/lang/{{ $lang['language_code'] }}"><span class="flag-icon flag-icon-{{ $lang['country_code'] }}"> </span>{{$lang['name']}}</a>                                
+                            <a class="dropdown-item" href="/lang/{{ $lang['language_code'] }}"><span class="flag-icon mr-2 flag-icon-{{ $lang['country_code'] }}"> </span>{{$lang['name']}}</a>                                
                         @endforeach
                         </div>
                     </li>
