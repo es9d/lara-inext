@@ -59,27 +59,47 @@
             @if($invoice->status == 'DRAFT')
                 <div class="alert alert-soft-dark d-flex align-items-center" role="alert">
                     <i class="material-icons mr-3">access_time</i>
-                    <div class="text-body"><strong>{{ __('messages.status') }} : </strong> {{ __('messages.draft') }}</div>
+                    <div class="text-body" style="width: 100%;">
+                        <strong>{{ __('messages.status') }} : </strong> 
+                        {{ __('messages.draft') }}
+                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                    </div>
                 </div>
             @elseif($invoice->status == 'SENT')
                 <div class="alert alert-soft-info d-flex align-items-center" role="alert">
                     <i class="material-icons mr-3">send</i>
-                    <div class="text-body"><strong>{{ __('messages.status') }} : </strong> {{ __('messages.mailed_to_customer') }}</div>
+                    <div class="text-body" style="width: 100%;">
+                        <strong>{{ __('messages.status') }} : </strong> 
+                        {{ __('messages.mailed_to_customer') }}
+                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                    </div>
                 </div>
             @elseif($invoice->status == 'VIEWED')
                 <div class="alert alert-soft-primary d-flex align-items-center" role="alert">
                     <i class="material-icons mr-3">visibility</i>
-                    <div class="text-body"><strong>{{ __('messages.status') }} : </strong> {{ __('messages.viewed_by_customer') }}</div>
+                    <div class="text-body" style="width: 100%;">
+                        <strong>{{ __('messages.status') }} : </strong> 
+                        {{ __('messages.viewed_by_customer') }}
+                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                    </div>
                 </div>
             @elseif($invoice->status == 'OVERDUE')
                 <div class="alert alert-soft-danger d-flex align-items-center" role="alert">
                     <i class="material-icons mr-3">schedule</i>
-                    <div class="text-body"><strong>{{ __('messages.status') }} : </strong> {{ __('messages.overdue') }}</div>
+                    <div class="text-body" style="width: 100%;">
+                        <strong>{{ __('messages.status') }} : </strong> 
+                        {{ __('messages.overdue') }}
+                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                    </div>
                 </div>
             @elseif($invoice->status == 'COMPLETED')
                 <div class="alert alert-soft-success d-flex align-items-center" role="alert">
                     <i class="material-icons mr-3">done</i>
-                    <div class="text-body"><strong>{{ __('messages.status') }} : </strong> {{ __('messages.payment_received') }}</div>
+                    <div class="text-body" style="width: 100%;">
+                        <strong>{{ __('messages.status') }} : </strong> 
+                        {{ __('messages.payment_received') }}
+                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                    </div>
                 </div>
             @endif
         </div>
