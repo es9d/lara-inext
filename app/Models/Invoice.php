@@ -48,7 +48,8 @@ class Invoice extends Model
         'notes',
         'private_notes',
         'sent',
-        'viewed'
+        'viewed',
+        'mailed_at'
     ];
 
     /**
@@ -61,7 +62,8 @@ class Invoice extends Model
         'updated_at',
         'deleted_at',
         'invoice_date',
-        'due_date'
+        'due_date',
+        'mailed_at'
     ];
 
     /**
@@ -264,6 +266,17 @@ class Invoice extends Model
     {
         $dateFormat = CompanySetting::getSetting('date_format', $this->company_id);
         return Carbon::parse($this->created_at)->format($dateFormat);
+    }
+    /**
+     * Set formatted_updated_at attribute by custom date format
+     * from Company Settings
+     *
+     * @return string
+     */
+    public function getFormattedUpdatedAtAttribute($value)
+    {
+        $dateFormat = CompanySetting::getSetting('date_format', $this->company_id);
+        return Carbon::parse($this->updated_at)->format($dateFormat);
     }
 
     /**
