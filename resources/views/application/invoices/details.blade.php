@@ -62,7 +62,7 @@
                     <div class="text-body" style="width: 100%;">
                         <strong>{{ __('messages.status') }} : </strong> 
                         {{ __('messages.draft') }}
-                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                        <span style="float:right;">{{$invoice->formatted_updated_at}}</span>
                     </div>
                 </div>
             @elseif($invoice->status == 'SENT')
@@ -71,7 +71,7 @@
                     <div class="text-body" style="width: 100%;">
                         <strong>{{ __('messages.status') }} : </strong> 
                         {{ __('messages.mailed_to_customer') }}
-                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                        <span style="float:right;">{{$invoice->formatted_updated_at}}</span>
                     </div>
                 </div>
             @elseif($invoice->status == 'VIEWED')
@@ -80,7 +80,7 @@
                     <div class="text-body" style="width: 100%;">
                         <strong>{{ __('messages.status') }} : </strong> 
                         {{ __('messages.viewed_by_customer') }}
-                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                        <span style="float:right;">{{$invoice->formatted_updated_at}}</span>
                     </div>
                 </div>
             @elseif($invoice->status == 'OVERDUE')
@@ -89,7 +89,7 @@
                     <div class="text-body" style="width: 100%;">
                         <strong>{{ __('messages.status') }} : </strong> 
                         {{ __('messages.overdue') }}
-                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                        <span style="float:right;">{{$invoice->formatted_updated_at}}</span>
                     </div>
                 </div>
             @elseif($invoice->status == 'COMPLETED')
@@ -98,7 +98,7 @@
                     <div class="text-body" style="width: 100%;">
                         <strong>{{ __('messages.status') }} : </strong> 
                         {{ __('messages.payment_received') }}
-                        <span style="float:right;">{{$invoice->formatted_created_at}}</span>
+                        <span style="float:right;">{{$invoice->formatted_updated_at}}</span>
                     </div>
                 </div>
             @endif
