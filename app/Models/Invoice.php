@@ -278,6 +278,17 @@ class Invoice extends Model
         $dateFormat = CompanySetting::getSetting('date_format', $this->company_id);
         return Carbon::parse($this->updated_at)->format($dateFormat);
     }
+    /**
+     * Set formatted_mailed_at attribute by custom date format
+     * from Company Settings
+     *
+     * @return string
+     */
+    public function getFormattedMailedAtAttribute($value)
+    {
+        $dateFormat = CompanySetting::getSetting('date_format', $this->company_id);
+        return Carbon::parse($this->mailed_at)->format($dateFormat);
+    }
 
     /**
      * Set formatted_due_date attribute by custom date format

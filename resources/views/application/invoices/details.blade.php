@@ -71,7 +71,7 @@
                     <div class="text-body" style="width: 100%;">
                         <strong>{{ __('messages.status') }} : </strong> 
                         {{ __('messages.mailed_to_customer') }}
-                        <span style="float:right;">{{$invoice->formatted_updated_at}}</span>
+                        <span style="float:right;">{{$invoice->formatted_mailed_at}}</span>
                     </div>
                 </div>
             @elseif($invoice->status == 'VIEWED')
