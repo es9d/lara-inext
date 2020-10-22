@@ -55,7 +55,7 @@
     right:0px;
     height: 80vh;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     .auth-right{
         display: none;
     }
