@@ -59,6 +59,9 @@
     .auth-right{
         display: none;
     }
+    .auth-mobile-img{
+        display: none;
+    }
 }
 </style>
     @include('layouts._js')
