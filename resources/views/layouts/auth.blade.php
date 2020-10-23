@@ -12,7 +12,7 @@
 
 <body>
     <div class="row" style="margin: 0px">
-        <div class="col-lg-6  col-md-12">
+        <div class="col-lg-6  col-md-12 mt-5" >
             <div style="width: 350px;margin:auto;">
                 <div class="d-flex flex-column justify-content-center align-items-center mt-2 mb-2 navbar-light">
                     <a href="{{ url('/login') }}" class="navbar-brand flex-column mb-2 align-items-center mr-0">
@@ -26,14 +26,14 @@
         <div class="col-lg-6 auth-right" style="padding: 0px;position: fixed;">
             <div style="margin-top:30vh;height:70vh;background-image:url('{{asset('assets/images/auth/blue.svg')}}');background-size:cover;">
                 <div class="p-5 row" style="padding-top:10vh!important;">
-                    <div class="col-lg-8" style="display: grid">
+                    <div class="col-lg-6" style="display: grid">
                         <img src="{{asset('assets/images/favicon.png')}}" width="70" alt="{{ config('app.name') }}">
-                        <img src="{{asset('assets/images/logo-invoice-next.svg')}}" style="width: 50%;">
+                        {{-- <img src="{{asset('assets/images/logo-invoice-next.svg')}}" style="width: 50%;"> --}}
                         <p style="color: white">Manage your real estate CRM on the go, away from the office with the iOS app from MyDesktop.</p>
                         <img src="{{asset('assets/images/auth/app.svg')}}" alt="{{ config('app.name') }}">
 
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <img src="{{asset('assets/images/auth/mobile.png')}}" class="auth-mobile-img">
                     </div>
                 </div>
