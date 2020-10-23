@@ -59,6 +59,9 @@
     .auth-right{
         display: none;
     }
+    
+}
+@media only screen and (max-width: 1100px) {
     .auth-mobile-img{
         display: none;
     }
