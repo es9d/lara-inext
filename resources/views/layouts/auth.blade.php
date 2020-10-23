@@ -10,18 +10,57 @@
     @include('layouts._css')
 </head>
 
-<body class="layout-login-centered-boxed">
-    <div class="layout-login-centered-boxed__form card">
-        <div class="d-flex flex-column justify-content-center align-items-center mt-2 mb-2 navbar-light">
-            <a href="{{ url('/login') }}" class="navbar-brand flex-column mb-2 align-items-center mr-0">
-                <img class="navbar-brand-icon mr-0 mb-2" src="{{asset('assets/images/favicon.png')}}" width="25" alt="{{ config('app.name') }}">
-                <img class="navbar-brand-icon mr-0 mb-2" src="{{asset('assets/images/logo-invoice-next.svg')}}" style="width: 50%;">
-            </a>
+<body>
+    <div class="row" style="margin: 0px">
+        <div class="col-lg-6  col-md-12">
+            <div style="width: 350px;margin:auto;">
+                <div class="d-flex flex-column justify-content-center align-items-center mt-2 mb-2 navbar-light">
+                    <a href="{{ url('/login') }}" class="navbar-brand flex-column mb-2 align-items-center mr-0">
+                        <img class="navbar-brand-icon mr-0 mb-2" src="{{asset('assets/images/logo.png')}}" width="25" alt="{{ config('app.name') }}">
+                        <img class="navbar-brand-icon mr-0 mb-2" src="{{asset('assets/images/logo-invoice-next.svg')}}" style="width: 50%;">
+                    </a>
+                </div>
+                @yield('content')
+            </div>
         </div>
+        <div class="col-lg-6 auth-right" style="padding: 0px;position: fixed;">
+            <div style="margin-top:30vh;height:70vh;background-image:url('{{asset('assets/images/auth/blue.svg')}}');background-size:cover;">
+                <div class="p-5 row" style="padding-top:10vh!important;">
+                    <div class="col-lg-8" style="display: grid">
+                        <img src="{{asset('assets/images/logo.png')}}" width="70" alt="{{ config('app.name') }}">
+                        <img src="{{asset('assets/images/logo-invoice-next.svg')}}" style="width: 50%;">
+                        <p style="color: white">Manage your real estate CRM on the go, away from the office with the iOS app from MyDesktop.</p>
+                        <img src="{{asset('assets/images/auth/app.svg')}}" alt="{{ config('app.name') }}">
 
-        @yield('content')
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="mobile.png" class="auth-mobile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+<style>
+.auth-right{
+    background-image: url(/assets/images/auth/1.jpg);
+    background-size: cover;
+    
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.auth-mobile-img{
+    position: fixed;
+    bottom: 0px;
+    right:0px;
+    height: 80vh;
+}
+@media only screen and (max-width: 1000px) {
+    .auth-right{
+        display: none;
+    }
+}
+</style>
     @include('layouts._js')
     @include('layouts._flash')
 </body>
