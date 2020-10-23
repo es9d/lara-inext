@@ -16,7 +16,7 @@
             <div style="width: 350px;margin:auto;">
                 <div class="d-flex flex-column justify-content-center align-items-center mt-2 mb-2 navbar-light">
                     <a href="{{ url('/login') }}" class="navbar-brand flex-column mb-2 align-items-center mr-0">
-                        <img class="navbar-brand-icon mr-0 mb-2" src="{{asset('assets/images/logo.png')}}" width="25" alt="{{ config('app.name') }}">
+                        <img class="navbar-brand-icon mr-0 mb-2" src="{{asset('assets/images/favicon.png')}}" width="25" alt="{{ config('app.name') }}">
                         <img class="navbar-brand-icon mr-0 mb-2" src="{{asset('assets/images/logo-invoice-next.svg')}}" style="width: 50%;">
                     </a>
                 </div>
