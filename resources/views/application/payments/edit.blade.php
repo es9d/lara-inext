@@ -35,6 +35,17 @@
         $(document).ready(function(){
             $('#invoice_select').prop('disabled', true);
             $('#customer').prop('disabled', true);
+            $('#update_button').click(function(e){
+                $('#invoice_select').attr('disabled', false);
+                $('#customer').attr('disabled', false);
+           
+                var form = $(this).closest('form');
+                var price_input = form.find('.price_input');
+           
+                price_input.val(price_input.unmask());
+                form.submit();
+
+            })
         });
     </script>
 @endsection
