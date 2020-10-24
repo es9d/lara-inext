@@ -12,7 +12,7 @@
 
 <body>
     <div class="row" style="margin: 0px">
-        <div class="col-lg-6  col-md-12 mt-5" >
+        <div class="col-lg-6  col-md-12 right-box" >
             <div style="width: 350px;margin:auto;">
                 <div class="d-flex flex-column justify-content-center align-items-center mt-2 mb-2 navbar-light">
                     <a href="{{ url('/login') }}" class="navbar-brand flex-column mb-2 align-items-center mr-0">
@@ -48,6 +48,11 @@
     right: 0;
     top: 0;
     bottom: 0;
+}
+.right-box{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 .auth-mobile-img{
     position: fixed;
