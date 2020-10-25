@@ -113,7 +113,7 @@
                 @include('application.dashboard._due_invoices')
                 
                 <div class="card-footer text-center border-0">
-                    <a class="text-muted" href="{{ route('invoices') }}">{{ __('messages.view_all') }}</a>
+                    <a class="text-muted" href="{{ route('invoices') }}/due">{{ __('messages.view_all') }}</a>
                 </div>
             </div>
         </div>
