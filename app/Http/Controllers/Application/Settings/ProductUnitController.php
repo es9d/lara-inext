@@ -100,6 +100,12 @@ class ProductUnitController extends Controller
     {
         $product_unit = ProductUnit::findOrFail($request->product_unit);
         
+        // If the product_unit already in use in Product
+        // then return back and flash an alert message
+        if($product_unit->products->count()){
+            session()->flash('alert-success', __('messages.product_unit_cant_deleted_invoice'));
+            return redirect()->route('settings.product.unit.edit', $product_unit);
+        }
         // Delete Product Unit from Database
         $product_unit->delete();
 

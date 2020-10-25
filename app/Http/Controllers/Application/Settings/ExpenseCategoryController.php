@@ -121,7 +121,12 @@ class ExpenseCategoryController extends Controller
     public function delete(Request $request)
     {
         $expense_category = ExpenseCategory::findOrFail($request->expense_category);
-        
+        // If the expense category already in use in expence
+        // then return back and flash an alert message
+        if ($expense_category->expenses->count() > 0) {
+            session()->flash('alert-success', __('messages.product_cant_deleted_invoice'));
+            return redirect()->route('settings.expense_categories.edit', $expense_category);
+        }
         // Delete Expense Category from Database
         $expense_category->delete();
 
