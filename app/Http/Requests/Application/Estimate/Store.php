@@ -24,6 +24,9 @@ class Store extends FormRequest
     public function rules()
     {
         // Make sure the lenght of product array is the same with other attributes of arrays
+        if(!$this->product){
+            $this->product = [];
+        }
         $max_lenght = count($this->product);
         return [
             'estimate_number' => 'required|unique:estimates,estimate_number',
