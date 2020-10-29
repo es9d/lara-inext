@@ -5,13 +5,13 @@
                 <div class="col-sm-auto">
                     <div class="form-group">
                         <label for="filter[display_name]">{{ __('messages.display_name') }}</label>
-                        <input name="filter[display_name]" type="text" class="form-control" value="{{ Request::get("filter")['display_name']??'' }}" placeholder="{{ __('messages.search') }}">
+                        <input name="filter[display_name]" type="text" class="form-control" value="{{ Request::get("filter")['display_name'] }}" placeholder="{{ __('messages.search') }}">
                     </div>
                 </div>
                 <div class="col-sm-auto">
                     <div class="form-group">
                         <label for="filter[contact_name]">{{ __('messages.contact_name') }}</label>
-                        <input name="filter[contact_name]" type="text" class="form-control" value="{{ Request::get("filter")['contact_name'] ??''}}" placeholder="{{ __('messages.search') }}">
+                        <input name="filter[contact_name]" type="text" class="form-control" value="{{ Request::get("filter")['contact_name'] }}" placeholder="{{ __('messages.search') }}">
                     </div>
                 </div>
             </div>

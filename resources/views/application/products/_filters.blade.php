@@ -5,7 +5,7 @@
                 <div class="col-sm-auto">
                     <div class="form-group">
                         <label for="filter[name]">{{ __('messages.name') }}</label>
-                        <input name="filter[name]" type="text" class="form-control" value="{{ Request::get("filter")['name'] ??''}}" placeholder="{{ __('messages.name') }}">
+                        <input name="filter[name]" type="text" class="form-control" value="{{ Request::get("filter")['name'] }}" placeholder="{{ __('messages.name') }}">
                     </div>
                 </div>
                 <div class="col-sm-auto">
